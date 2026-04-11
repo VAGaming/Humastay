@@ -14,7 +14,7 @@ body {
 }
 
 .head {
-  background-image: url("..IMG/Headergioithieu.png");
+  background-image: url("../IMG/Headergioithieu.png");
   background-size: cover;
   background-position: center;
   height: 650px;

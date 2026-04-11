@@ -14,7 +14,7 @@ body {
 }
 
 .head {
-  background-image: url("..IMG/Overlay+OverlayBlur.png");
+  background-image: url("../IMG/Overlay+OverlayBlur.png");
 
   background-size: cover;
   background-position: center;
@@ -99,7 +99,7 @@ body {
 .ggmap {
   height: 400px;
   width: 100%;
-  background-image: url(..IMG/Map\ Mockup.png);
+  background-image: url("../IMG/Map\ Mockup.png");
   text-align: center;
   padding-top: 160px;
   background-position: auto;
