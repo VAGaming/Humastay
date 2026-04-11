@@ -1,0 +1,254 @@
+* {
+    box-sizing: border-box;
+    font-family: "Be Vietnam Pro", sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+.head {
+    background-image: url("../img/Overlay+OverlayBlur.png");
+
+    background-size: cover;
+    background-position: center;
+    height: 650px;
+    position: relative;
+}
+
+.custom-navbar {
+    background: rgba(202, 202, 202, 0.7);
+}
+
+.custom-navbar a {
+    text-decoration: none;
+    color: #0a3d62;
+    font-weight: bold;
+    padding-left: 40px;
+    font-size: large;
+}
+
+.noidunghead {
+    font-weight: bold;
+    margin-top: 150px;
+    text-align: center;
+    z-index: 2;
+    position: relative;
+}
+
+.noidunghead p {
+    padding: 5px;
+    margin-left: 35%;
+    margin-right: 35%;
+    letter-spacing: 4px;
+    color: white;
+}
+
+.noidunghead h1 {
+    color: white;
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: 65px;
+}
+
+.noidunghead h6 {
+    padding-top: 20px;
+    color: rgb(255, 255, 255);
+    margin-top: 20px;
+    font-size: 21px;
+    letter-spacing: 2px;
+}
+
+.lienlac {
+    width: 100%;
+    height: 550px;
+    background-color: rgb(245, 243, 243);
+}
+
+.ndlienlac li {
+    background-color: rgb(245, 243, 243);
+    border: none;
+
+}
+
+.ndlienlac img {
+    padding: 14px;
+    background-color: #dab66a;
+    border-radius: 50%;
+    margin-left: 50px;
+}
+
+.ndlienlac h5 {
+    letter-spacing: 1px;
+    color: #0a3d62;
+}
+
+.form1 {
+    background-color: white;
+    padding: 20px;
+    border-radius: 20px;
+    position: relative;
+    right: 40px;
+}
+
+
+.ggmap {
+    height: 400px;
+    width: 100%;
+    background-image: url(../img/Map\ Mockup.png);
+    text-align: center;
+    padding-top: 160px;
+    background-position: auto;
+
+}
+
+.ggmap img {
+    padding: 15px;
+    background-color: #0a3d62;
+    border-radius: 50%;
+    border: 4px solid white;
+}
+
+.ggmap p {
+    font-size: 20px;
+    background-color: aliceblue;
+    padding: 10px;
+    width: 20%;
+    border-radius: 20px;
+    margin: auto;
+    margin-top: 10px;
+}
+
+.cauhoi {
+    height: 650px;
+    width: 100%;
+    background-color: #f8ecd0;
+}
+
+.noidungdichvu {
+    width: 30%;
+    margin: auto;
+    text-align: center;
+    padding-top: 30px;
+    border-bottom: 10px solid #dab66a;
+    padding-top: 90px;
+}
+
+.accordion-item {
+    background-color: #f5f3f3;
+    border-radius: 15px;
+    border: none;
+}
+
+.accordion-button {
+    background-color: #f5f3f3;
+    font-size: 20px;
+    font-weight: bold;
+    color: #0a3d62;
+}
+
+.accordion-body {
+    background-color: #f5f3f3;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    font-size: 23px;
+    color: rgb(87, 87, 87);
+
+}
+
+.formcauhoi {
+    width: 90%;
+    padding-top: 40px;
+    margin: auto;
+}
+
+.formcauhoi button {
+    color: #0a3d62;
+    font-size: 25px;
+    background-color: #f5f3f3;
+    padding: 30px;
+    border-radius: 15px;
+}
+
+.footer {
+    background: #ffb000;
+    padding: 70px 0 30px;
+    color: white;
+}
+
+.footer img {
+    width: 150px;
+    margin-bottom: 15px;
+}
+
+.footer p {
+    font-size: 14px;
+    max-width: 300px;
+}
+
+.footer h6 {
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #0a3d62;
+}
+
+.footer a {
+    display: block;
+    color: white;
+    font-size: 14px;
+    margin-bottom: 8px;
+    text-decoration: none;
+}
+
+.sub {
+    display: flex;
+    margin-top: 15px;
+    border: 3px solid #0a3d62;
+    border-radius: 14px;
+    overflow: hidden;
+    width: 100%;
+}
+
+.sub input {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    font-size: 14px;
+    outline: none;
+}
+
+.sub button {
+    border: none;
+    background: #0a3d62;
+    color: white;
+    padding: 0 20px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 3px solid #0a3d62;
+}
+
+.app {
+    display: flex;
+    gap: 12px;
+}
+
+.copy {
+    text-align: right;
+    color: #0a3d62;
+    font-weight: 500;
+    font-size: 14px;
+}

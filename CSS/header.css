@@ -1,0 +1,38 @@
+* {
+  box-sizing: border-box;
+  font-family: "Be Vietnam Pro", sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.head {
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.custom-navbar {
+  background: #f9a828;
+}
+
+.custom-navbar a {
+  text-decoration: none;
+  color: #0a3d62;
+  font-weight: bold;
+  padding-left: 50px;
+  font-size: large;
+}
+
+.header-content {
+  margin-top: 120px;
+}
+
+.header-box {
+  background: rgba(255, 255, 255, 0.6);
+  padding: 25px;
+  border-radius: 20px;
+  width: 45%;
+}

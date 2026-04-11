@@ -1,0 +1,29 @@
+* {
+  box-sizing: border-box;
+  font-family: "Be Vietnam Pro", sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#container-custom{
+  width: 80% !important;
+  margin: auto;
+}
+
+.card-title {
+  color: #07617d;
+}
+
+.card {
+  transition: all 0.3s ease-in-out;
+}
+
+.card:hover {
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;
+  background-color: #fffbe8;
+  transform: translateY(-5px);
+  cursor: pointer;
+}

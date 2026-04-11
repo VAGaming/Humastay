@@ -1,0 +1,229 @@
+* {
+    box-sizing: border-box;
+    font-family: "Be VietNam Pro", sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #f5f6fa;
+}
+
+.container-custom {
+    max-width: 80%;
+    margin: auto;
+}
+
+.custom-navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+    border-radius: 0 0 20px 20px;
+}
+
+.custom-navbar a {
+    text-decoration: none;
+    color: #0a3d62;
+    font-weight: bold;
+    padding-left: 30px;
+}
+
+.search-float {
+    position: sticky;
+    top: 70px;
+    z-index: 900;
+}
+
+.search-float>div {
+    background: #ffb000;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.search-float .form-label {
+    font-size: 13px;
+    font-weight: 700;
+    color: #0a3d62;
+}
+
+#display-checkin,
+#display-checkout,
+#display-guests {
+    font-weight: 700;
+    font-size: 16px;
+    color: #0a3d62;
+}
+
+.form-label {
+    font-size: 12px;
+    color: #0a3d62;
+}
+
+.carousel-inner {
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.carousel-item {
+    height: 500px;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.price-sidebar-card {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+#display-price {
+    font-size: 28px;
+}
+
+.info-booking-wrapper .col-md-6:first-child {
+    border-right: 1px solid #ddd;
+}
+
+.review-item {
+    background: #fff;
+    border-radius: 10px;
+    border: 1px solid #eee;
+}
+
+.tags span {
+    background: #eef2f7 !important;
+    color: #0a3d62 !important;
+    border-radius: 20px;
+    padding: 6px 12px;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.btn.a {
+    background: #0a3d62;
+    border: none;
+    border-radius: 30px;
+    color: white;
+}
+
+.btn.a:hover {
+    background: #ffb000;
+    color: #0a3d62;
+}
+
+.horizontal {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.horizontal-card {
+    width: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.horizontal-card .row {
+    height: 180px;
+    display: flex;
+    align-items: stretch;
+}
+
+.horizontal-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.horizontal-card .col-3 {
+    height: 100%;
+}
+
+.horizontal-card .col-7 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.horizontal-card .col-2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.horizontal-card .tags {
+    margin-top: 5px;
+}
+
+.horizontal-card .text-primary {
+    font-size: 14px;
+}
+
+.horizontal-card .text-danger {
+    font-size: 18px;
+}
+
+.horizontal-card button {
+    border-radius: 20px;
+}
+
+.horizontal-card .p-3 {
+    margin-top: 0;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    max-height: 70px;
+    overflow: hidden;
+}
+
+.badge {
+    font-size: 12px;
+    padding: 5px 8px;
+    border-radius: 20px;
+}
+
+.rating {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background: #0a3d62;
+    color: #fff;
+    padding: 4px 8px;
+    border-radius: 6px;
+    font-size: 12px;
+}
+
+.img-wrap {
+    position: relative;
+}
+
+.info-booking-wrapper {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    border: 1px solid #eee;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.row {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+header,
+section,
+.container {
+    overflow: visible;
+}
