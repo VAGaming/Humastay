@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,420 +8,417 @@
     <link rel="stylesheet" href="../CSS/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <title>Humastay</title>
 </head>
+
 <body>
-        <div class="container-fluid p-0">
-
+    <div class="container">
         <header class="head">
+            <!-- NAVBAR -->
+            <nav class="navbar-custom">
+                <div class="nav-container">
+                    <a class="logo-brand" href="../index.html">
+                        <img src="./IMG/Logo.png" alt="Logo">
 
-            <nav class="navbar navbar-expand-lg custom-navbar">
-                <div class="container px-5">
-                    <a class="navbar-brand d-flex align-items-center gap-2" href="../index.html">
-                        <img src="./IMG/Logo.png" height="50">
-                        <span class="brand-text fw-bold text-primary"></span>
                     </a>
 
-                    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
-                        <span class="navbar-toggler-icon"></span>
+                    <button class="menu-toggle" id="menuToggle">
+                        <span></span>
+                        <span></span>
+                        <span></span>
                     </button>
 
-                    <div class="collapse navbar-collapse justify-content-end" id="menu">
-                        <ul class="navbar-nav gap-4">
-                            <li><a href="">Trang chủ</a></li>
-                            <li><a href="../HTML/gioithieu.html">Giới thiệu</a></li>
-                            <li><a href="../HTML/Phong.html">Phòng</a></li>
-                            <li><a href="../HTML/facilities.html">Tiện ích</a></li>
-                            <li><a href="../HTML/lienhe.html">Liên hệ</a></li>
-                        </ul>
-                    </div>
+                    <ul class="nav-menu" id="navMenu">
+                        <li><a href="">Trang chủ</a></li>
+                        <li><a href="../HTML/gioithieu.html">Giới thiệu</a></li>
+                        <li><a href="../HTML/Phong.html">Phòng</a></li>
+                        <li><a href="../HTML/facilities.html">Tiện ích</a></li>
+                        <li><a href="../HTML/lienhe.html">Liên hệ</a></li>
+                    </ul>
                 </div>
             </nav>
 
-            <div class="container header-content">
+            <!-- HEADER CONTENT -->
+            <div class="header-wrapper">
                 <div class="header-box">
                     <h1>Tìm nơi nghỉ dưỡng hoàn hảo của bạn</h1>
-                    <p>
-                        Humastay mang đến không gian nghỉ dưỡng hiện đại, tiện nghi và gần gũi với thiên nhiên.
-                        Chúng tôi cam kết mang lại trải nghiệm tuyệt vời cho mọi du khách.
-                    </p>
-                </div>
-            </div>
-            <div class="searchwrapper">
-                <div class="searchbar">
-                    <input type="text" placeholder="Địa điểm" class="form-control">
-                    <input type="text" placeholder="Loại phòng" class="form-control">
-                    <input type="text" placeholder="Giá tiền" class="form-control">
-                    <button class="btn-search">Tìm kiếm</button>
+                    <p>Humastay mang đến không gian nghỉ dưỡng hiện đại, tiện nghi và gần gũi với thiên nhiên. Chúng tôi
+                        cam kết mang lại trải nghiệm tuyệt vời cho mọi du khách.</p>
                 </div>
             </div>
 
+            <!-- SEARCH BAR -->
+            <div class="search-box">
+                <input type="text" placeholder="Địa điểm">
+                <input type="text" placeholder="Loại phòng">
+                <input type="text" placeholder="Giá tiền">
+                <button>Tìm kiếm</button>
+            </div>
         </header>
-        <section class="hitsroom container">
 
-            <h2>Phòng Nghỉ Nổi Bật</h2>
-            <p>Được lựa chọn bởi mọi thế hệ</p>
+        <section class="hitsroom">
+            <div class="container-main">
+                <h2>Phòng Nghỉ Nổi Bật</h2>
+                <p>Được lựa chọn bởi mọi thế hệ</p>
 
-            <div class="roomfilter">
-                <a class="active" href="#">Tất cả</a>
-                <a href="#">VIP</a>
-                <a href="#">Thường</a>
-            </div>
+                <div class="roomfilter">
+                    <a class="active" href="#">Tất cả</a>
+                    <a href="#">VIP</a>
+                    <a href="#">Thường</a>
+                </div>
 
-            <div class="row g-4">
+                <div class="row g-4">
+                    <div class="col-lg-6 col-md-12">
+                        <div class="roomcard">
+                            <img src="./IMG/phong.jpg" alt="Phòng VIP">
+                            <div class="roominfo">
+                                <h3>Phòng VIP</h3>
+                                <p><i class="fa-solid fa-location-dot"></i> 567 Đường Hướng Dương</p>
+                                <p><i class="fa-solid fa-bed"></i> 3 Giường • 1 Máy lạnh</p>
+                                <p><i class="fa-solid fa-bath"></i> 2 Phòng tắm • <i class="fa-solid fa-wifi"></i> Wi-Fi
+                                    miễn phí</p>
+                                <div class="price-row">
+                                    <span class="room-price">130.000 VNĐ / Đêm</span>
+                                    <a href="./HTML/login.html" class="book-text">ĐẶT PHÒNG</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-                <div class="col-md-6">
-                    <div class="roomcard">
-                        <img src="./IMG/phong.jpg">
-                        <div class="roominfo">
-                            <h3>Phòng VIP</h3>
-                            <p><i class="fa-solid fa-location-dot"></i> 567 Đường Hướng Dương</p>
-                            <p><i class="fa-solid fa-bed"></i> 3 Giường • 1 Máy lạnh</p>
-                            <p><i class="fa-solid fa-bath"></i> 2 Phòng tắm • <i class="fa-solid fa-wifi"></i> Wi-Fi miễn phí</p>
-                            <div class="price-row">
-                                <span class="room-price">130.000 VNĐ / Đêm</span>
-                                <a href="./HTML/login.html" class="book-text">ĐẶT PHÒNG</a>
+                    <div class="col-lg-6 col-md-12">
+                        <div class="roomcard">
+                            <img src="./IMG/phong.jpg" alt="Phòng VIP">
+                            <div class="roominfo">
+                                <h3>Phòng VIP</h3>
+                                <p><i class="fa-solid fa-location-dot"></i> 567 Đường Hướng Dương</p>
+                                <p><i class="fa-solid fa-bed"></i> 3 Giường • 1 Máy lạnh</p>
+                                <p><i class="fa-solid fa-bath"></i> 2 Phòng tắm • <i class="fa-solid fa-wifi"></i> Wi-Fi
+                                    miễn phí</p>
+                                <div class="price-row">
+                                    <span class="room-price">130.000 VNĐ / Đêm</span>
+                                    <a href="./HTML/login.html" class="book-text">ĐẶT PHÒNG</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 col-md-12">
+                        <div class="roomcard">
+                            <img src="./IMG/phong.jpg" alt="Phòng VIP">
+                            <div class="roominfo">
+                                <h3>Phòng VIP</h3>
+                                <p><i class="fa-solid fa-location-dot"></i> 567 Đường Hướng Dương</p>
+                                <p><i class="fa-solid fa-bed"></i> 3 Giường • 1 Máy lạnh</p>
+                                <p><i class="fa-solid fa-bath"></i> 2 Phòng tắm • <i class="fa-solid fa-wifi"></i> Wi-Fi
+                                    miễn phí</p>
+                                <div class="price-row">
+                                    <span class="room-price">130.000 VNĐ / Đêm</span>
+                                    <a href="./HTML/login.html" class="book-text">ĐẶT PHÒNG</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 col-md-12">
+                        <div class="roomcard">
+                            <img src="./IMG/phong.jpg" alt="Phòng VIP">
+                            <div class="roominfo">
+                                <h3>Phòng VIP</h3>
+                                <p><i class="fa-solid fa-location-dot"></i> 567 Đường Hướng Dương</p>
+                                <p><i class="fa-solid fa-bed"></i> 3 Giường • 1 Máy lạnh</p>
+                                <p><i class="fa-solid fa-bath"></i> 2 Phòng tắm • <i class="fa-solid fa-wifi"></i> Wi-Fi
+                                    miễn phí</p>
+                                <div class="price-row">
+                                    <span class="room-price">130.000 VNĐ / Đêm</span>
+                                    <a href="./HTML/login.html" class="book-text">ĐẶT PHÒNG</a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6">
-                    <div class="roomcard">
-                        <img src="./IMG/phong.jpg">
-                        <div class="roominfo">
-                            <h3>Phòng VIP</h3>
-                            <p><i class="fa-solid fa-location-dot"></i> 567 Đường Hướng Dương</p>
-                            <p><i class="fa-solid fa-bed"></i> 3 Giường • 1 Máy lạnh</p>
-                            <p><i class="fa-solid fa-bath"></i> 2 Phòng tắm • <i class="fa-solid fa-wifi"></i> Wi-Fi miễn phí</p>
-                            <div class="price-row">
-                                <span class="room-price">130.000 VNĐ / Đêm</span>
-                                <a href="./HTML/login.html" class="book-text">ĐẶT PHÒNG</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="roomcard">
-                        <img src="./IMG/phong.jpg">
-                        <div class="roominfo">
-                            <h3>Phòng VIP</h3>
-                            <p><i class="fa-solid fa-location-dot"></i> 567 Đường Hướng Dương</p>
-                            <p><i class="fa-solid fa-bed"></i> 3 Giường • 1 Máy lạnh</p>
-                            <p><i class="fa-solid fa-bath"></i> 2 Phòng tắm • <i class="fa-solid fa-wifi"></i> Wi-Fi miễn phí</p>
-                            <div class="price-row">
-                                <span class="room-price">130.000 VNĐ / Đêm</span>
-                                <a href="./HTML/login.html" class="book-text">ĐẶT PHÒNG</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="roomcard">
-                        <img src="./IMG/phong.jpg">
-                        <div class="roominfo">
-                            <h3>Phòng VIP</h3>
-                            <p><i class="fa-solid fa-location-dot"></i> 567 Đường Hướng Dương</p>
-                            <p><i class="fa-solid fa-bed"></i> 3 Giường • 1 Máy lạnh</p>
-                            <p><i class="fa-solid fa-bath"></i> 2 Phòng tắm • <i class="fa-solid fa-wifi"></i> Wi-Fi miễn phí</p>
-                            <div class="price-row">
-                                <span class="room-price">130.000 VNĐ / Đêm</span>
-                                <a href="./HTML/login.html" class="book-text">ĐẶT PHÒNG</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
             </div>
         </section>
 
-    </div>
+        <section class="expert-section py-5">
+            <div class="container-main">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 col-md-12 mb-4 mb-lg-0">
+                        <h6 class="text-primary fst-italic">Chúng tôi là chuyên gia trong lĩnh vực</h6>
+                        <h2 class="fw-bold mb-3">Tạo ra những trải nghiệm tốt nhất</h2>
+                        <p class="text-muted">Hãy tin chúng tôi đi</p>
 
-<section class="expert-section py-5">
-    <div class="container">
-        <div class="row align-items-center">
-
-            <div class="col-lg-6">
-                <h6 class="text-primary fst-italic">Chúng tôi là chuyên gia trong lĩnh vực</h6>
-                <h2 class="fw-bold mb-3">Tạo ra những trải nghiệm tốt nhất</h2>
-      <p class="text-muted">
-Hãy tin chúng tôi đi      </p>
-
-      <div class="quote-box mt-4">
-        <p class="fw-semibold mb-2">“Đây là những Homestay tốt nhất cho bạn”</p>
-        <p class="text-muted small">
-Tin tôi đi, tôi không tày đâu.        </p>
-        <div class="d-flex justify-content-between mt-3 small">
-          <span class="fw-bold">Woody Woodpecker</span>
-          <span class="text-primary">CEO của HumStay</span>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-lg-6 position-relative mt-4 mt-lg-0">
-        <div class="tag-wrap">
-                            <div class="tag-back-right"></div>
-                            <div class="tag-front-right">
-                                Kinh nghiệm hơn 10 năm
+                        <div class="quote-box mt-4">
+                            <p class="fw-semibold mb-2">"Đây là những Homestay tốt nhất cho bạn"</p>
+                            <p class="text-muted small">Tin tôi đi, tôi không tày đâu.</p>
+                            <div class="d-flex justify-content-between mt-3 small">
+                                <span class="fw-bold">Woody Woodpecker</span>
+                                <span class="text-primary">CEO của HumStay</span>
                             </div>
                         </div>
-      <img
-        src="./IMG/expert_house.jpg"
-        class="img-fluid rounded-4 shadow"
-        alt="House"
-      >
-    </div>
+                    </div>
 
-  </div>
-</section>
-
-<section class="facilities-section py-5">
-  <div class="container">
-    <div class="text-center text-white mb-4">
-      <h3 class="fw-bold">Các tiện nghi của chúng tôi</h3>
-      <p class="mb-0">Chúng tôi cung cấp những tiện nghi tốt nhất cho bạn</p>
-    </div>
-
-    <div class="row g-4">
-      
-      <div class="col-md-4">
-        <div class="facility-card">
-          <img src="./IMG/private_office.jpg">
-          <p class="mt-3 fw-semibold">
-            <i class="bi bi-house facility-icon" style="margin-right: 16px;"></i>
-            Văn Phòng Làm Việc
-          </p>
-        </div>
-      </div>
-
-      <div class="col-md-4">
-        <div class="facility-card">
-          <img src="./IMG/breakfast.jpg">
-          <p class="mt-3 fw-semibold">
-            <i class="bi bi-cup-hot facility-icon" style="margin-right: 16px;"></i>
-            Bữa Sáng
-          </p>
-        </div>
-      </div>
-
-      <div class="col-md-4">
-        <div class="facility-card">
-          <img src="./IMG/gym.jpg">
-          <p class="mt-3 fw-semibold">
-            <i class="bi bi-heart-pulse facility-icon" style="margin-right: 16px;"></i>
-            Phòng Gym
-          </p>
-        </div>
-      </div>
-
-      <div class="col-md-4">
-        <div class="facility-card">
-          <img src="./IMG/wifi.png">
-          <p class="mt-3 fw-semibold">
-            <i class="bi bi-wifi facility-icon" style="margin-right: 16px;"></i>
-            Wi-Fi Miễn Phí
-          </p>
-        </div>
-      </div>
-
-      <div class="col-md-4">
-        <div class="facility-card">
-          <img src="./IMG/swimming_pool.jpg">
-          <p class="mt-3 fw-semibold">
-            <i class="bi bi-water facility-icon" style="margin-right: 16px;"></i>
-            Hồ Bơi
-          </p>
-        </div>
-      </div>
-
-      <div class="col-md-4">
-        <div class="facility-card">
-          <img src="./IMG/parking_area.jpg">
-          <p class="mt-3 fw-semibold">
-            <i class="bi bi-p-square facility-icon" style="margin-right: 16px;"></i>
-            Bãi Đỗ Xe
-          </p>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-    <section class="contact">
-        <div class="container">
-            <div class="row g-5 align-items-center">
-
-                <div class="col-md-6">
-                    <div class="img-box">
+                    <div class="col-lg-6 col-md-12 position-relative mt-4 mt-lg-0">
                         <div class="tag-wrap">
-                            <div class="tag-back-left"></div>
-                            <div class="tag-front-left">
-                                Liên hệ để được tư vấn
+                            <div class="tag-back-right"></div>
+                            <div class="tag-front-right">Kinh nghiệm hơn 10 năm</div>
+                        </div>
+                        <img src="./IMG/expert_house.jpg" class="img-fluid rounded-4 shadow" alt="House">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="facilities-section py-5">
+            <div class="container-main">
+                <div class="text-center text-white mb-4">
+                    <h3 class="fw-bold">Các tiện nghi của chúng tôi</h3>
+                    <p class="mb-0">Chúng tôi cung cấp những tiện nghi tốt nhất cho bạn</p>
+                </div>
+
+                <div class="row g-4">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="facility-card">
+                            <img src="./IMG/private_office.jpg" alt="Văn Phòng Làm Việc">
+                            <p class="mt-3 fw-semibold">
+                                <i class="bi bi-house facility-icon"></i>
+                                Văn Phòng Làm Việc
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4">
+                        <div class="facility-card">
+                            <img src="./IMG/breakfast.jpg" alt="Bữa Sáng">
+                            <p class="mt-3 fw-semibold">
+                                <i class="bi bi-cup-hot facility-icon"></i>
+                                Bữa Sáng
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4">
+                        <div class="facility-card">
+                            <img src="./IMG/gym.jpg" alt="Phòng Gym">
+                            <p class="mt-3 fw-semibold">
+                                <i class="bi bi-heart-pulse facility-icon"></i>
+                                Phòng Gym
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4">
+                        <div class="facility-card">
+                            <img src="./IMG/wifi.png" alt="Wi-Fi Miễn Phí">
+                            <p class="mt-3 fw-semibold">
+                                <i class="bi bi-wifi facility-icon"></i>
+                                Wi-Fi Miễn Phí
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4">
+                        <div class="facility-card">
+                            <img src="./IMG/swimming_pool.jpg" alt="Hồ Bơi">
+                            <p class="mt-3 fw-semibold">
+                                <i class="bi bi-water facility-icon"></i>
+                                Hồ Bơi
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4">
+                        <div class="facility-card">
+                            <img src="./IMG/parking_area.jpg" alt="Bãi Đỗ Xe">
+                            <p class="mt-3 fw-semibold">
+                                <i class="bi bi-p-square facility-icon"></i>
+                                Bãi Đỗ Xe
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact">
+            <div class="container-main">
+                <div class="row g-5 align-items-center">
+                    <div class="col-lg-6 col-md-12">
+                        <div class="img-box">
+                            <div class="tag-wrap">
+                                <div class="tag-back-left"></div>
+                                <div class="tag-front-left">Liên hệ để được tư vấn</div>
+                            </div>
+                            <img src="./IMG/homestay.jpg" alt="Homestay">
+                        </div>
+
+                        <div class="row mt-4 info">
+                            <div class="col-md-6 col-12">
+                                <h6>Surabaya</h6>
+                                <p><i class="bi bi-telephone"></i> 123-456-789</p>
+                                <p><i class="bi bi-geo-alt"></i> Jl. Danau Jonge 12,<br> Mayjend Sungkono,<br> Surabaya
+                                </p>
+                                <p><i class="bi bi-envelope"></i> humastay@gmail.com</p>
+                            </div>
+
+                            <div class="col-md-6 col-12">
+                                <h6>Malang</h6>
+                                <p><i class="bi bi-telephone"></i> 123-456-789</p>
+                                <p><i class="bi bi-geo-alt"></i> Jl. Danau Jonge 12,<br> Mayjend Sungkono,<br> Malang
+                                </p>
+                                <p><i class="bi bi-envelope"></i> humastay@gmail.com</p>
                             </div>
                         </div>
-
-                        <img src=./IMG/homestay.jpg">
                     </div>
 
-                    <div class="row mt-4 info">
-                        <div class="col-6">
-                            <h6>Surabaya</h6>
-                            <p><i class="bi bi-telephone"></i> 123-456-789</p>
-                            <p>
-                                <i class="bi bi-geo-alt"></i>
-                                Jl. Danau Jonge 12,<br>
-                                Mayjend Sungkono,<br>
-                                Surabaya
-                            </p>
-                            <p><i class="bi bi-envelope"></i> humastay@gmail.com</p>
-                        </div>
-
-                        <div class="col-6">
-                            <h6>Malang</h6>
-                            <p><i class="bi bi-telephone"></i> 123-456-789</p>
-                            <p>
-                                <i class="bi bi-geo-alt"></i>
-                                Jl. Danau Jonge 12,<br>
-                                Mayjend Sungkono,<br>
-                                Malang
-                            </p>
-                            <p><i class="bi bi-envelope"></i> humastay@gmail.com</p>
+                    <div class="col-lg-6 col-md-12">
+                        <div class="form-box">
+                            <h4>Liên hệ với chúng tôi</h4>
+                            <input type="text" placeholder="Họ">
+                            <input type="text" placeholder="Tên">
+                            <input type="email" placeholder="Email">
+                            <input type="text" placeholder="Số điện thoại">
+                            <textarea placeholder="Nhập nội dung tin nhắn"></textarea>
+                            <button>Gửi tin nhắn</button>
                         </div>
                     </div>
                 </div>
-
-                <div class="col-md-6">
-                    <div class="form-box">
-                        <h4>Liên hệ với chúng tôi</h4>
-                        <input type="text" placeholder="Họ">
-                        <input type="text" placeholder="Tên">
-                        <input type="email" placeholder="Email">
-                        <input type="text" placeholder="Số điện thoại">
-                        <textarea placeholder="Nhập nội dung tin nhắn"></textarea>
-                        <button>Gửi tin nhắn</button>
-                    </div>
-                </div>
-
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="review-sec">
-        <div class="container">
-            <div class="row align-items-center">
-
-                <div class="col-md-5">
-                    <h3><i class="bi bi-chat-quote"></i> Đánh giá từ khách hàng</h3>
-                    <p>
-                        Những chia sẻ thực tế từ khách hàng đã trải nghiệm dịch vụ lưu trú
-                        tại Humastay. Chúng tôi luôn trân trọng mọi ý kiến đóng góp.
-                    </p>
-                </div>
-
-                <div class="col-md-auto d-flex justify-content-center">
-                    <div class="image-group">
-
-                        <div class="review-nav">
-                            <i class="bi bi-chevron-up"></i>
-                            <span>02</span>
-                            <small>/ 05</small>
-                            <i class="bi bi-chevron-down"></i>
-                        </div>
-
-                        <img src="./IMG/face1.png" class="img-small">
-                        <img src="./IMG/face2.png" class="img-big">
-                        <img src="./IMG/face3.png" class="img-small">
+        <section class="review-sec">
+            <div class="container-main">
+                <div class="row align-items-center">
+                    <div class="col-lg-5 col-md-12 mb-4 mb-lg-0">
+                        <h3><i class="bi bi-chat-quote"></i> Đánh giá từ khách hàng</h3>
+                        <p>Những chia sẻ thực tế từ khách hàng đã trải nghiệm dịch vụ lưu trú tại Humastay. Chúng tôi
+                            luôn trân trọng mọi ý kiến đóng góp.</p>
                     </div>
-                </div>
 
-                <div class="col-md-5">
-                    <div class="review-box">
-                        <p>“Nơi nghỉ dưỡng tuyệt vời cho kỳ nghỉ”</p>
-                        <p>
-                            Không gian thoáng đãng, yên tĩnh, thiết kế đẹp mắt.
-                            Đội ngũ nhân viên thân thiện, dịch vụ chuyên nghiệp
-                            và rất đáng để quay lại trong những kỳ nghỉ tiếp theo.
-                        </p>
-                        <div class="review-user">
-                            <span class="name">Woody Woodpecker</span>
+                    <div class="col-lg-auto col-md-12 d-flex justify-content-center mb-4 mb-lg-0">
+                        <div class="image-group">
+                            <div class="review-nav">
+                                <i class="bi bi-chevron-up"></i>
+                                <span>02</span>
+                                <small>/ 05</small>
+                                <i class="bi bi-chevron-down"></i>
+                            </div>
+                            <img src="./IMG/face1.png" class="img-small" alt="Face 1">
+                            <img src="./IMG/face2.png" class="img-big" alt="Face 2">
+                            <img src="./IMG/face3.png" class="img-small" alt="Face 3">
+                        </div>
+                    </div>
 
-                            <div class="stars">
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                                <span>5.0 / 5.0</span>
+                    <div class="col-lg-5 col-md-12">
+                        <div class="review-box">
+                            <p>"Nơi nghỉ dưỡng tuyệt vời cho kỳ nghỉ"</p>
+                            <p>Không gian thoáng đãng, yên tĩnh, thiết kế đẹp mắt. Đội ngũ nhân viên thân thiện, dịch vụ
+                                chuyên nghiệp và rất đáng để quay lại trong những kỳ nghỉ tiếp theo.</p>
+                            <div class="review-user">
+                                <span class="name">Woody Woodpecker</span>
+                                <div class="stars">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <span>5.0 / 5.0</span>
+                                </div>
                             </div>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
+        <footer class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <img src="../IMG/Logo.png" alt="Humastay Logo" />
+                        <p>Cập nhật tin tức, ưu đãi và thông báo mới nhất từ Humastay.</p>
+
+                        <div class="sub">
+                            <input type="email" placeholder="Nhập email của bạn" />
+                            <button>Đăng ký</button>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <h6>Liên kết nhanh</h6>
+                        <a href="../index.html">Trang chủ</a>
+                        <a href="./gioithieu.html">Giới thiệu</a>
+                        <a href="./phong.html">Homestay</a>
+                        <a href="./lienhe.html">Liên hệ</a>
+                    </div>
+
+                    <div class="col-md-3">
+                        <h6>Dịch vụ</h6>
+                        <a href="#">Thiết kế phòng theo yêu cầu</a>
+                        <a href="#">Quản lý bất động sản</a>
+                        <a href="#">Đảm bảo an ninh</a>
+                        <a href="#">Thiết kế sơ bộ</a>
+                    </div>
+
+                    <div class="col-md-2">
+                        <h6>Pháp lý</h6>
+                        <a href="#">Chính sách đổi trả</a>
+                        <a href="#">Chính sách vận chuyển</a>
+                        <a href="#">Chính sách bảo mật</a>
+                        <a href="#">Điều khoản dịch vụ</a>
                     </div>
                 </div>
 
-            </div>
-        </div>
-    </section>
-
-    <footer class="footer">
-        <div class="container">
-            <div class="row">
-
-                <div class="col-md-4">
-                    <img src="./IMG/Logo.png" alt="Humastay Logo">
-                    <p>
-                        Cập nhật tin tức, ưu đãi và thông báo mới nhất từ Humastay.
-                    </p>
-
-                    <div class="sub">
-                        <input type="email" placeholder="Nhập email của bạn">
-                        <button>Đăng ký</button>
+                <div class="footer-bottom">
+                    <div class="app">
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-youtube"></i></a>
                     </div>
-
-                </div>
-
-                <div class="col-md-3">
-                    <h6>Liên kết nhanh</h6>
-                    <a href="../index.html">Trang chủ</a>
-                    <a href="../HTML/gioithieu.html">Giới thiệu</a>
-                    <a href="../HTML/Phong.html">Homestay</a>
-                    <a href="../HTML/lienhe.html">Liên hệ</a>
-                </div>
-
-                <div class="col-md-3">
-                    <h6>Dịch vụ</h6>
-                    <a href="#">Thiết kế phòng theo yêu cầu</a>
-                    <a href="#">Quản lý bất động sản</a>
-                    <a href="#">Đảm bảo an ninh</a>
-                    <a href="#">Thiết kế sơ bộ</a>
-                </div>
-
-                <div class="col-md-2">
-                    <h6>Pháp lý</h6>
-                    <a href="#">Chính sách đổi trả</a>
-                    <a href="#">Chính sách vận chuyển</a>
-                    <a href="#">Chính sách bảo mật</a>
-                    <a href="#">Điều khoản dịch vụ</a>
+                    <div class="copy">© 2025 Humastay. All rights reserved.</div>
                 </div>
             </div>
+        </footer>
+    </div>
+    <script>
+        const menuToggle = document.getElementById('menuToggle');
+        const navMenu = document.getElementById('navMenu');
 
-            <div class="footer-bottom">
-                <div class="app">
-                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
-                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
-                </div>
-                <div class="copy">
-                    © 2025 Humastay. All rights reserved.
-                </div>
-            </div>
-        </div>
-    </footer>
+        // Toggle menu khi click button
+        menuToggle.addEventListener('click', function (e) {
+            e.stopPropagation();
+            menuToggle.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
 
+        // Đóng menu khi click vào link
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', function () {
+                menuToggle.classList.remove('active');
+                navMenu.classList.remove('active');
+            });
+        });
 
+        // Đóng menu khi click ngoài
+        document.addEventListener('click', function (e) {
+            if (!e.target.closest('.nav-container')) {
+                menuToggle.classList.remove('active');
+                navMenu.classList.remove('active');
+            }
+        });
+
+        // Đóng menu khi scroll
+        window.addEventListener('scroll', function () {
+            menuToggle.classList.remove('active');
+            navMenu.classList.remove('active');
+        });
+    </script>
     <script src="../js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>

@@ -1,62 +1,53 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tiện ích</title>
-    <link rel="stylesheet" href="../CSS/bootstrap.min.css" />
-    <link rel="stylesheet" href="../CSS/facilities.css" />
-    <link rel="stylesheet" href="../CSS/header.css" />
-    <link rel="stylesheet" href="../CSS/footer.css" />
-  </head>
 
-  <body>
-    <div id="container">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tiện ích</title>
+  <link rel="stylesheet" href="../CSS/bootstrap.min.css" />
+  <link rel="stylesheet" href="../CSS/facilities.css" />
+  <link rel="stylesheet" href="../CSS/header.css" />
+  <link rel="stylesheet" href="../CSS/footer.css" />
+</head>
+
+<body>
+  <div id="container">
+    <header class="head">
       <header class="head">
-        <nav class="navbar navbar-expand-lg custom-navbar">
-          <div class="container px-5">
-            <a
-              class="navbar-brand d-flex align-items-center gap-2"
-              href="../index.html"
-            >
-              <img src="../IMG/Logo.png" height="50" />
-              <span class="brand-text fw-bold text-primary"></span>
+        <nav class="navbar-custom">
+          <div class="nav-container">
+            <a class="logo-brand" href="../index.html">
+              <img src="../IMG/Logo.png" alt="Logo">
+
             </a>
 
-            <button
-              class="navbar-toggler"
-              data-bs-toggle="collapse"
-              data-bs-target="#menu"
-            >
-              <span class="navbar-toggler-icon"></span>
+            <button class="menu-toggle" id="menuToggle">
+              <span></span>
+              <span></span>
+              <span></span>
             </button>
 
-            <div class="collapse navbar-collapse justify-content-end" id="menu">
-              <ul class="navbar-nav gap-4">
-                <li><a href="../index.html">Trang chủ</a></li>
-                <li><a href="../HTML/gioithieu.html">Giới thiệu</a></li>
-                <li><a href="../HTML/Phong.html">Phòng</a></li>
-                <li><a href="../HTML/facilities.html">Tiện ích</a></li>
-                <li><a href="../HTML/lienhe.html">Liên hệ</a></li>
-              </ul>
-            </div>
+            <ul class="nav-menu" id="navMenu">
+              <li><a href="../index.html">Trang chủ</a></li>
+              <li><a href="../HTML/gioithieu.html">Giới thiệu</a></li>
+              <li><a href="../HTML/Phong.html">Phòng</a></li>
+              <li><a href="../HTML/facilities.html">Tiện ích</a></li>
+              <li><a href="../HTML/lienhe.html">Liên hệ</a></li>
+            </ul>
           </div>
         </nav>
       </header>
       <div class="container mb-5" style="max-width: 80%">
-        <h2
-          class="text-center m-4 fs-1 fw-semibold"
-          style="color: #07617d; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2)"
-        >
+        <h2 class="text-center m-4 fs-1 fw-semibold"
+          style="color: #07617d; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2)">
           Các tiện ích hàng đầu tại Humastay
         </h2>
         <div class="row g-4">
           <div class="col-md-12">
             <div class="card shadow-sm">
               <div class="row g-0 align-items-center">
-                <div
-                  class="col-md-3 d-flex flex-column justify-content-center p-3"
-                >
+                <div class="col-md-3 d-flex flex-column justify-content-center p-3">
                   <h5 class="card-title text-center fs-4 fw-semibold">
                     Hồ bơi ngoài trời
                   </h5>
@@ -66,12 +57,8 @@
                   <a href="../HTML/login.html" class="stretched-link"></a>
                 </div>
                 <div class="col-md-9">
-                  <img
-                    class="img-fluid object-fit-cover rounded-end"
-                    style="height: 250px; width: 100%"
-                    src="../IMG/swimming_pool.jpg"
-                    alt="Hồ bơi ngoài trời"
-                  />
+                  <img class="img-fluid object-fit-cover rounded-end" style="height: 250px; width: 100%"
+                    src="../IMG/swimming_pool.jpg" alt="Hồ bơi ngoài trời" />
                 </div>
               </div>
             </div>
@@ -79,9 +66,7 @@
           <div class="col-md-12">
             <div class="card shadow-sm">
               <div class="row g-0 align-items-center">
-                <div
-                  class="col-md-3 d-flex flex-column justify-content-center p-3"
-                >
+                <div class="col-md-3 d-flex flex-column justify-content-center p-3">
                   <h5 class="card-title text-center fs-4 fw-semibold">
                     Bữa sáng buffet
                   </h5>
@@ -92,12 +77,8 @@
                 </div>
 
                 <div class="col-md-9">
-                  <img
-                    class="img-fluid object-fit-cover rounded-end"
-                    style="height: 250px; width: 100%"
-                    src="../IMG/buffet.jpg"
-                    alt="Bữa sáng buffet"
-                  />
+                  <img class="img-fluid object-fit-cover rounded-end" style="height: 250px; width: 100%"
+                    src="../IMG/buffet.jpg" alt="Bữa sáng buffet" />
                 </div>
               </div>
             </div>
@@ -106,9 +87,7 @@
           <div class="col-md-12">
             <div class="card shadow-sm">
               <div class="row g-0 align-items-center">
-                <div
-                  class="col-md-3 d-flex flex-column justify-content-center p-3"
-                >
+                <div class="col-md-3 d-flex flex-column justify-content-center p-3">
                   <h5 class="card-title text-center fs-4 fw-semibold">
                     Spa & Wellness
                   </h5>
@@ -119,12 +98,8 @@
                 </div>
 
                 <div class="col-md-9">
-                  <img
-                    class="img-fluid object-fit-cover rounded-end"
-                    style="height: 250px; width: 100%"
-                    src="../IMG/spa.jpg"
-                    alt="Spa & Wellness"
-                  />
+                  <img class="img-fluid object-fit-cover rounded-end" style="height: 250px; width: 100%"
+                    src="../IMG/spa.jpg" alt="Spa & Wellness" />
                 </div>
               </div>
             </div>
@@ -133,9 +108,7 @@
           <div class="col-md-12">
             <div class="card shadow-sm">
               <div class="row g-0 align-items-center">
-                <div
-                  class="col-md-3 d-flex flex-column justify-content-center p-3"
-                >
+                <div class="col-md-3 d-flex flex-column justify-content-center p-3">
                   <h5 class="card-title text-center fs-4 fw-semibold">
                     Phòng tập Gym
                   </h5>
@@ -145,12 +118,8 @@
                   <a href="../HTML/login.html" class="stretched-link"></a>
                 </div>
                 <div class="col-md-9">
-                  <img
-                    class="img-fluid object-fit-cover rounded-end"
-                    style="height: 250px; width: 100%"
-                    src="../IMG/gym.jpg"
-                    alt="Phòng tập Gym"
-                  />
+                  <img class="img-fluid object-fit-cover rounded-end" style="height: 250px; width: 100%"
+                    src="../IMG/gym.jpg" alt="Phòng tập Gym" />
                 </div>
               </div>
             </div>
@@ -207,7 +176,8 @@
           </div>
         </div>
       </footer>
-    </div>
-    <script src="./JS/bootstrap.bundle.min.js"></script>
-  </body>
+  </div>
+  <script src="./JS/bootstrap.bundle.min.js"></script>
+</body>
+
 </html>

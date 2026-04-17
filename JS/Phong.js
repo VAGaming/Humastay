@@ -70,10 +70,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
     });
 
+    const checkInInput = document.getElementById("checkin-input");
+    const checkOutInput = document.getElementById("checkout-input");
+
+    if (checkInInput) checkInInput.value = "";
+    if (checkOutInput) checkOutInput.value = "";
+
     const searchBtn = document.getElementById("search-btn");
 
     if (searchBtn) {
         searchBtn.addEventListener("click", function () {
+            const btn = this;
             const checkIn = document.getElementById("checkin-input")?.value;
             const checkOut = document.getElementById("checkout-input")?.value;
 
@@ -103,13 +110,30 @@ document.addEventListener("DOMContentLoaded", function () {
                 checkOut: checkOut,
                 guests: guestsText
             };
-            localStorage.setItem("currentSearch", JSON.stringify(searchData));
+            sessionStorage.setItem("currentSearch", JSON.stringify(searchData));
+
+            btn.classList.add("loading");
+            btn.innerText = "Đang tìm...";
+
+            setTimeout(() => {
+                btn.classList.remove("loading");
+                btn.innerText = "Tìm";
+                const target = document.querySelector(".main");
+
+                if (target) {
+                    window.scrollTo({
+                        top: target.offsetTop - 100,
+                        behavior: "smooth"
+                    });
+                }
+
+            }, 1500);
         });
     }
 
     document.addEventListener("click", function (e) {
         if (e.target.classList.contains("view-btn")) {
-            const savedSearch = JSON.parse(localStorage.getItem("currentSearch"));
+            const savedSearch = JSON.parse(sessionStorage.getItem("currentSearch"));
 
             if (!savedSearch) {
                 alert("Vui lòng nhập thông tin và nhấn nút Tìm kiếm trước");
@@ -118,17 +142,26 @@ document.addEventListener("DOMContentLoaded", function () {
             }
 
             const card = e.target.closest(".card");
+            const tags = JSON.parse(card.getAttribute("data-tags"));
             const roomData = {
                 name: card.querySelector("h4, h5").innerText,
                 price: card.querySelector(".text-danger").innerText,
                 rating: (card.querySelector(".text-primary") || card.querySelector(".rating")).innerText,
                 checkIn: savedSearch.checkIn,
                 checkOut: savedSearch.checkOut,
-                guests: savedSearch.guests
+                guests: savedSearch.guests,
+                tags: tags
             };
 
-            localStorage.setItem("selectedRoom", JSON.stringify(roomData));
+            sessionStorage.setItem("selectedRoom", JSON.stringify(roomData));
             window.location.href = "../HTML/ChiTietPhong.html";
+        }
+    });
+
+    document.getElementById("applyFilterBtn").addEventListener("click", function () {
+        const offcanvas = bootstrap.Offcanvas.getInstance(document.getElementById('filterSidebar'));
+        if (offcanvas) {
+            offcanvas.hide();
         }
     });
 
@@ -302,65 +335,82 @@ function renderTags(tags) {
 }
 
 function createHorizontalCard(i) {
-    let tags = renderTags(getFullTags());
+    let tagArr = getFullTags();
+    let tags = renderTags(tagArr);
 
     return `
-    <div class="card horizontal-card shadow-sm mb-3">
+    <div class="card shadow-sm mb-3" data-tags='${JSON.stringify(tagArr)}'>
         <div class="row g-0">
 
-            <div class="col-3 position-relative">
-                <img src="../IMG/${i}.webp" class="img-fluid w-100 h-100 object-fit-cover">
+            <div class="col-md-4 col-12">
+                <img src="../IMG/${i}.webp" 
+                     class="img-fluid w-100 h-100 object-fit-cover rounded-start">
             </div>
 
-            <div class="col-7 p-3 d-flex flex-column h-100 border-end">
-                <h4 class="fw-bold mb-2">${roomNames[i - 1]}</h4>
+            <div class="col-md-5 col-12 p-3 d-flex flex-column">
+                <h5 class="fw-bold mb-2">${roomNames[i - 1]}</h5>
+
                 <div class="tags mb-2">
                     ${tags}
                 </div>
             </div>
 
-            <div class="col-2 p-3 d-flex flex-column justify-content-between text-end">
-                <div class="text-primary fw-bold text-end">
-                    ⭐ ${(3 + Math.random() * 2).toFixed(1)}
+            <div class="col-md-3 col-12 p-3 d-flex flex-column justify-content-between text-md-end text-start">
+
+                <div class="text-primary fw-bold">
+                    <i class="bi bi-star-fill text-warning"></i>
+                    ${(3 + Math.random() * 2).toFixed(1)}
                 </div>
-                <div class="text-danger fw-bold">
+
+                <div class="text-danger fw-bold fs-5">
                     ${(400000 + i * 50000).toLocaleString()} VND
                 </div>
-                <div class="d-flex justify-content-end mt-2">
-                    <button class="btn btn-warning btn-sm fw-bold px-4 view-btn">
-                        Xem phòng
-                    </button>
-                </div>
+
+                <button class="btn btn-warning btn-sm fw-bold px-4 view-btn">
+                    Xem phòng
+                </button>
             </div>
+
         </div>
     </div>
     `;
 }
 
 function createVerticalCard(i) {
-    let tags = renderTags(getTagsVertical());
+    let tagArr = getTagsVertical();
+    let tags = renderTags(tagArr);
 
     return `
-    <div class="card vertical-card shadow-sm h-100">
-        <div class="img-wrap">
-            <img src="../IMG/${i}.webp" class="card-img-top">
-            <div class="rating">⭐ ${(3 + Math.random() * 2).toFixed(1)}</div>
-        </div>
+    <div class="col-lg-4 col-md-6 col-12">
+        <div class="card shadow-sm h-100" data-tags='${JSON.stringify(tagArr)}'>
 
-        <div class="card-body">
-            <h5 class="fw-bold">${roomNames[i - 1]}</h5>
+            <div class="position-relative">
+                <img src="../IMG/${i}.webp" class="card-img-top object-fit-cover">
 
-            <div class="tags d-flex flex-wrap mb-2">
-                ${tags}
+                <div class="position-absolute top-0 end-0 bg-primary text-white px-2 py-1 small rounded m-2">
+                    <i class="bi bi-star-fill text-warning"></i>
+                    ${(3 + Math.random() * 2).toFixed(1)}
+                </div>
             </div>
 
-            <div class="text-danger fw-bold mb-2">
-                ${(300000 + i * 40000).toLocaleString()} VND
+            <div class="card-body d-flex flex-column">
+
+                <h6 class="fw-bold">${roomNames[i - 1]}</h6>
+
+                <div class="tags mb-2">
+                    ${tags}
+                </div>
+
+                <div class="text-danger fw-bold mb-2">
+                    ${(300000 + i * 40000).toLocaleString()} VND
+                </div>
+
+                <button class="btn btn-warning btn-sm fw-bold px-4 view-btn">
+                    Xem phòng
+                </button>
+
             </div>
 
-            <button class="btn btn-warning btn-sm fw-bold px-4 view-btn">
-                Xem phòng
-            </button>
         </div>
     </div>
     `;
