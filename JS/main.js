@@ -31,13 +31,6 @@ passwordInput.addEventListener('input', function () {
     }
 });
 
-function togglePassword() {
-    if (passwordInput.type === 'password') {
-        passwordInput.type = 'text';
-    } else {
-        passwordInput.type = 'password';
-    }
-}
 
 loginForm.addEventListener('submit', function (e) {
     e.preventDefault();
@@ -69,5 +62,5 @@ loginForm.addEventListener('submit', function (e) {
         return;
     }
 
-    window.location.href = "../H"; 
+   
 });
