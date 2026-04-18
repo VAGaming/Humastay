@@ -178,6 +178,40 @@
       </footer>
   </div>
   <script src="./JS/bootstrap.bundle.min.js"></script>
+
+  <script>
+        const menuToggle = document.getElementById('menuToggle');
+        const navMenu = document.getElementById('navMenu');
+
+        // Toggle menu khi click button
+        menuToggle.addEventListener('click', function (e) {
+            e.stopPropagation();
+            menuToggle.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        // Đóng menu khi click vào link
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', function () {
+                menuToggle.classList.remove('active');
+                navMenu.classList.remove('active');
+            });
+        });
+
+        // Đóng menu khi click ngoài
+        document.addEventListener('click', function (e) {
+            if (!e.target.closest('.nav-container')) {
+                menuToggle.classList.remove('active');
+                navMenu.classList.remove('active');
+            }
+        });
+
+        // Đóng menu khi scroll
+        window.addEventListener('scroll', function () {
+            menuToggle.classList.remove('active');
+            navMenu.classList.remove('active');
+        });
+    </script>
 </body>
 
 </html>
