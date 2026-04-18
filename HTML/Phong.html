@@ -2,724 +2,700 @@
 <html lang="vi">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rooms</title>
-  <link rel="stylesheet" href="../CSS/bootstrap.min.css">
-  <link rel="stylesheet" href="../CSS/Phong.css">
-  <link rel="stylesheet" href="../css/footer.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rooms</title>
+    <link rel="stylesheet" href="../CSS/bootstrap.min.css">
+    <link rel="stylesheet" href="../CSS/Phong.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 
 <body>
-  <div class="container">
+    <div class="container">
 
-    <header class="head">
-      <nav class="custom-navbar">
-        <div class="nav-container">
-          <a class="logo-brand" href="../index.html">
-            <img src="../IMG/Logo.png" alt="Logo">
-            <span>HUMASTAY</span>
-          </a>
+        <header class="head">
 
-          <button class="menu-toggle" id="menuToggle">
-            <span></span>
-            <span></span>
-            <span></span>
-          </button>
+            <nav class="navbar navbar-expand-lg custom-navbar">
+                <div class="container px-5">
+                    <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+                        <img src="../img/Logo.png" height="50">
+                    </a>
 
-          <ul class="nav-menu" id="navMenu">
-            <li><a href="../index.html">Trang chủ</a></li>
-            <li><a href="../HTML/gioithieu.html">Giới thiệu</a></li>
-            <li><a href="../HTML/Phong.html">Phòng</a></li>
-            <li><a href="../HTML/facilities.html">Tiện ích</a></li>
-            <li><a href="../HTML/lienhe.html">Liên hệ</a></li>
-          </ul>
-        </div>
-      </nav>
+                    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
 
-      <div class="title-banner text-center mb-4">
-        <h2>phòng tiện nghi đầy đủ, giá yêu thương</h2>
-      </div>
-      <div class="searchwrapper">
-
-        <div class="searchbar">
-
-          <div class="search-top text-center">
-            CHÚNG TÔI GIÚP BẠN TÌM NHANH HƠN!
-          </div>
-
-          <div class="search-content">
-
-            <div class="d-flex gap-3 mb-3 justify-content-center flex-wrap cho">
-              <a href="#" class="active">Chỗ ở qua đêm</a>
-              <a href="#">Chỗ ở trong ngày</a>
-            </div>
-
-            <div class="row g-3 mb-3">
-
-              <div class="col-lg-4 col-md-6 col-12">
-                <label class="form-label">Ngày đi</label>
-                <input type="date" id="checkin-input" class="form-control">
-              </div>
-
-              <div class="col-lg-4 col-md-6 col-12">
-                <label class="form-label">Ngày về</label>
-                <input type="date" id="checkout-input" class="form-control">
-              </div>
-
-              <div class="col-lg-4 col-12 position-relative">
-                <label class="form-label">Phòng</label>
-
-                <div class="form-control d-flex justify-content-between align-items-center" onclick="toggleGuest()"
-                  style="cursor:pointer;">
-                  <span id="guest-text">1 phòng, 2 người lớn, 0 trẻ em</span>
-                  <span>▼</span>
-                </div>
-
-                <div class="guest-dropdown d-none" id="guest-dropdown">
-
-                  <div class="d-flex justify-content-between mb-2">
-                    <span>Phòng</span>
-                    <div>
-                      <button class="btn btn-sm btn-outline-secondary" onclick="change('room', -1)">-</button>
-                      <span id="room" class="mx-2">1</span>
-                      <button class="btn btn-sm btn-outline-secondary" onclick="change('room', 1)">+</button>
+                    <div class="collapse navbar-collapse justify-content-end" id="menu">
+                        <ul class="navbar-nav gap-4">
+                            <li><a href="../HTML/index.html">Trang chủ</a></li>
+                            <li><a href="../HTML/gioithieu.html">Giới thiệu</a></li>
+                            <li><a href="../HTML/Phong.html">Phòng</a></li>
+                            <li><a href="../HTML/facilities.html">Tiện ích</a></li>
+                            <li><a href="../HTML/lienhe.html">Liên hệ</a></li>
+                        </ul>
                     </div>
-                  </div>
+                </div>
+            </nav>
 
-                  <div class="d-flex justify-content-between mb-2">
-                    <span>Người lớn</span>
-                    <div>
-                      <button class="btn btn-sm btn-outline-secondary" onclick="change('adult', -1)">-</button>
-                      <span id="adult" class="mx-2">2</span>
-                      <button class="btn btn-sm btn-outline-secondary" onclick="change('adult', 1)">+</button>
+            <div class="title-banner text-center mb-4">
+                <h2>phòng tiện nghi đầy đủ, giá yêu thương</h2>
+            </div>
+            <div class="searchwrapper">
+
+                <div class="searchbar">
+
+                    <div class="search-top text-center">
+                        CHÚNG TÔI GIÚP BẠN TÌM NHANH HƠN!
                     </div>
-                  </div>
 
-                  <div class="d-flex justify-content-between">
-                    <span>Trẻ em</span>
-                    <div>
-                      <button class="btn btn-sm btn-outline-secondary" onclick="change('child', -1)">-</button>
-                      <span id="child" class="mx-2">0</span>
-                      <button class="btn btn-sm btn-outline-secondary" onclick="change('child', 1)">+</button>
+                    <div class="search-content">
+
+                        <div class="d-flex gap-3 mb-3 justify-content-center flex-wrap cho">
+                            <a href="#" class="active">Chỗ ở qua đêm</a>
+                            <a href="#">Chỗ ở trong ngày</a>
+                        </div>
+
+                        <div class="row g-3 mb-3">
+
+                            <div class="col-lg-4 col-md-6 col-12">
+                                <label class="form-label">Ngày đi</label>
+                                <input type="date" id="checkin-input" class="form-control">
+                            </div>
+
+                            <div class="col-lg-4 col-md-6 col-12">
+                                <label class="form-label">Ngày về</label>
+                                <input type="date" id="checkout-input" class="form-control">
+                            </div>
+
+                            <div class="col-lg-4 col-12 position-relative">
+                                <label class="form-label">Phòng</label>
+
+                                <div class="form-control d-flex justify-content-between align-items-center"
+                                    onclick="toggleGuest()" style="cursor:pointer;">
+                                    <span id="guest-text">1 phòng, 2 người lớn, 0 trẻ em</span>
+                                    <span>▼</span>
+                                </div>
+
+                                <div class="guest-dropdown d-none" id="guest-dropdown">
+
+                                    <div class="d-flex justify-content-between mb-2">
+                                        <span>Phòng</span>
+                                        <div>
+                                            <button class="btn btn-sm btn-outline-secondary"
+                                                onclick="change('room', -1)">-</button>
+                                            <span id="room" class="mx-2">1</span>
+                                            <button class="btn btn-sm btn-outline-secondary"
+                                                onclick="change('room', 1)">+</button>
+                                        </div>
+                                    </div>
+
+                                    <div class="d-flex justify-content-between mb-2">
+                                        <span>Người lớn</span>
+                                        <div>
+                                            <button class="btn btn-sm btn-outline-secondary"
+                                                onclick="change('adult', -1)">-</button>
+                                            <span id="adult" class="mx-2">2</span>
+                                            <button class="btn btn-sm btn-outline-secondary"
+                                                onclick="change('adult', 1)">+</button>
+                                        </div>
+                                    </div>
+
+                                    <div class="d-flex justify-content-between">
+                                        <span>Trẻ em</span>
+                                        <div>
+                                            <button class="btn btn-sm btn-outline-secondary"
+                                                onclick="change('child', -1)">-</button>
+                                            <span id="child" class="mx-2">0</span>
+                                            <button class="btn btn-sm btn-outline-secondary"
+                                                onclick="change('child', 1)">+</button>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="text-center">
+                            <button id="search-btn" class="btn s fw-bold">Tìm</button>
+                        </div>
+
                     </div>
-                  </div>
 
                 </div>
-              </div>
 
             </div>
+        </header>
 
-            <div class="text-center">
-              <button id="search-btn" class="btn s fw-bold">Tìm</button>
+        <section class="container">
+            <div class="d-lg-none mb-3 text-end">
+                <button class="btn btn-filter-custom" data-bs-toggle="offcanvas" data-bs-target="#filterSidebar">
+                    <i class="bi bi-funnel"></i> Lọc
+                </button>
             </div>
+            <div class="row">
 
-          </div>
+                <aside class="col-lg-3 d-none d-lg-block">
+                    <div class="sidebar">
 
-        </div>
+                        <div class="card mb-3">
+                            <div class="card-body">
 
-      </div>
-    </header>
+                                <h5 class="card-title">Giá mỗi đêm</h5>
 
-    <section class="container">
-      <div class="d-lg-none mb-3 text-end">
-        <button class="btn btn-filter-custom" data-bs-toggle="offcanvas" data-bs-target="#filterSidebar">
-          <i class="bi bi-funnel"></i> Lọc
-        </button>
-      </div>
-      <div class="row">
+                                <div class="d-flex gap-2">
+                                    <input type="number" class="form-control" placeholder="Từ (VNĐ)">
+                                    <input type="number" class="form-control" placeholder="Đến (VNĐ)">
+                                </div>
 
-        <aside class="col-lg-3 d-none d-lg-block">
-          <div class="sidebar">
+                                <div class="d-flex justify-content-between mt-2 small text-muted">
+                                    <span>0đ</span>
+                                    <span>10.000.000đ</span>
+                                </div>
+                            </div>
 
-            <div class="card mb-3">
-              <div class="card-body">
+                            <div class="filter-group p-3 border rounded mb-3">
+                                <h4>Loại phòng</h4>
 
-                <h5 class="card-title">Giá mỗi đêm</h5>
+                                <div class="filter-sub">
+                                    <p>Phòng theo tiêu chuẩn chất lượng:</p>
+                                    <div class="filter-list limited d-flex flex-column gap-1">
+                                        <label><input type="checkbox"> Phòng Standard</label>
+                                        <label><input type="checkbox"> Phòng Superior</label>
+                                        <label><input type="checkbox"> Phòng Deluxe</label>
+                                        <label><input type="checkbox"> Phòng Suite</label>
+                                    </div>
+                                    <span class="toggle">Xem thêm</span>
+                                </div>
 
-                <div class="d-flex gap-2">
-                  <input type="number" class="form-control" placeholder="Từ (VNĐ)">
-                  <input type="number" class="form-control" placeholder="Đến (VNĐ)">
+                                <div class="filter-sub mt-3">
+                                    <p>Phòng theo tiêu chuẩn loại giường:</p>
+                                    <div class="filter-list limited d-flex flex-column gap-1">
+                                        <label><input type="checkbox"> Phòng Twin</label>
+                                        <label><input type="checkbox"> Phòng Double</label>
+                                        <label><input type="checkbox"> Phòng Triple</label>
+                                        <label><input type="checkbox"> Phòng Family</label>
+                                        <label><input type="checkbox"> Phòng Dorm</label>
+                                    </div>
+                                    <span class="toggle">Xem thêm</span>
+                                </div>
+                            </div>
+
+                            <div class="p-3 border rounded mb-3">
+                                <h4 class="mb-3">Đánh giá cao</h4>
+
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="rate3">
+                                    <label class="form-check-label text-warning" for="rate3">
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                    </label>
+                                </div>
+
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="rate4">
+                                    <label class="form-check-label text-warning" for="rate4">
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                    </label>
+                                </div>
+
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="rate5">
+                                    <label class="form-check-label text-warning" for="rate5">
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="filter-group p-3 border rounded mb-3">
+                                <h4>Dạng phòng</h4>
+
+                                <div class="filter-list limited d-flex flex-column gap-1">
+                                    <label><input type="checkbox"> Tất cả</label>
+                                    <label><input type="checkbox"> Phòng thường</label>
+                                    <label><input type="checkbox"> Phòng VIP</label>
+                                </div>
+                            </div>
+
+                            <div class="filter-group p-3 border rounded mb-3">
+                                <h4>Tiện nghi</h4>
+
+                                <div class="filter-sub">
+                                    <p>Tiện nghi phòng ở</p>
+                                    <div class="filter-list limited d-flex flex-column gap-1">
+                                        <label><input type="checkbox"> Giường, nệm, chăn, gối</label>
+                                        <label><input type="checkbox"> Điều hòa / quạt</label>
+                                        <label><input type="checkbox"> Tủ quần áo</label>
+                                        <label><input type="checkbox"> Bàn làm việc</label>
+                                        <label><input type="checkbox"> Két an toàn</label>
+                                        <label><input type="checkbox"> Mini bar</label>
+                                        <label><input type="checkbox"> Ấm đun nước</label>
+                                        <label><input type="checkbox"> Máy sấy tóc</label>
+                                        <label><input type="checkbox"> Gương trang điểm</label>
+                                        <label><input type="checkbox"> Rèm cửa chống sáng</label>
+                                        <label><input type="checkbox"> Ban công riêng</label>
+                                        <label><input type="checkbox"> Cách âm</label>
+                                    </div>
+                                    <span class="toggle">Xem thêm</span>
+                                </div>
+
+                                <div class="filter-sub mt-3">
+                                    <p>Tiện nghi phòng tắm</p>
+                                    <div class="filter-list limited d-flex flex-column gap-1">
+                                        <label><input type="checkbox"> Phòng tắm riêng</label>
+                                        <label><input type="checkbox"> Nước nóng lạnh</label>
+                                        <label><input type="checkbox"> Khăn tắm</label>
+                                        <label><input type="checkbox"> Đồ vệ sinh cá nhân</label>
+                                    </div>
+                                    <span class="toggle">Xem thêm</span>
+                                </div>
+
+                                <div class="filter-sub mt-3">
+                                    <p>Tiện nghi nhà bếp</p>
+                                    <div class="filter-list limited d-flex flex-column gap-1">
+                                        <label><input type="checkbox"> Bếp nấu ăn</label>
+                                        <label><input type="checkbox"> Tủ lạnh</label>
+                                        <label><input type="checkbox"> Lò vi sóng</label>
+                                        <label><input type="checkbox"> Dụng cụ nấu ăn</label>
+                                    </div>
+                                    <span class="toggle">Xem thêm</span>
+                                </div>
+
+                                <div class="filter-sub mt-3">
+                                    <p>Tiện nghi công nghệ</p>
+                                    <div class="filter-list limited d-flex flex-column gap-1">
+                                        <label><input type="checkbox"> Wi-Fi miễn phí</label>
+                                        <label><input type="checkbox"> TV</label>
+                                        <label><input type="checkbox"> Truyền hình cáp</label>
+                                    </div>
+                                    <span class="toggle">Xem thêm</span>
+                                </div>
+
+                                <div class="filter-sub mt-3">
+                                    <p>Tiện ích hỗ trợ</p>
+                                    <div class="filter-list limited d-flex flex-column gap-1">
+                                        <label><input type="checkbox"> Máy giặt</label>
+                                        <label><input type="checkbox"> Dọn phòng</label>
+                                        <label><input type="checkbox"> Chỗ đậu xe</label>
+                                        <label><input type="checkbox"> Máy pha cà phê</label>
+                                    </div>
+                                    <span class="toggle">Xem thêm</span>
+                                </div>
+
+                                <div class="filter-sub mt-3">
+                                    <p>Giải trí</p>
+                                    <div class="filter-list limited d-flex flex-column gap-1">
+                                        <label><input type="checkbox"> Hồ bơi</label>
+                                        <label><input type="checkbox"> BBQ</label>
+                                        <label><input type="checkbox"> Karaoke</label>
+                                        <label><input type="checkbox"> Boardgame</label>
+                                    </div>
+                                    <span class="toggle">Xem thêm</span>
+                                </div>
+                            </div>
+
+                            <div class="filter-group p-3 border rounded mb-3">
+                                <h4>Không gian</h4>
+
+                                <div class="filter-sub">
+                                    <p>Không gian bên trong</p>
+                                    <div class="filter-list limited d-flex flex-column gap-1">
+                                        <label><input type="checkbox"> Phòng ngủ riêng</label>
+                                        <label><input type="checkbox"> Phòng khách</label>
+                                        <label><input type="checkbox"> Khu bếp chung</label>
+                                        <label><input type="checkbox"> Phòng ăn</label>
+                                        <label><input type="checkbox"> Không gian làm việc</label>
+                                        <label><input type="checkbox"> Phòng sinh hoạt chung</label>
+                                    </div>
+                                    <span class="toggle">Xem thêm</span>
+                                </div>
+
+                                <div class="filter-sub mt-3">
+                                    <p>Không gian bên ngoài</p>
+                                    <div class="filter-list limited d-flex flex-column gap-1">
+                                        <label><input type="checkbox"> Ban công</label>
+                                        <label><input type="checkbox"> Sân vườn</label>
+                                        <label><input type="checkbox"> Sân thượng</label>
+                                        <label><input type="checkbox"> Khu BBQ ngoài trời</label>
+                                        <label><input type="checkbox"> Hồ bơi</label>
+                                        <label><input type="checkbox"> Khu vực ngồi ngoài trời</label>
+                                    </div>
+                                    <span class="toggle">Xem thêm</span>
+                                </div>
+
+                                <div class="filter-sub mt-3">
+                                    <p>Không gian cảnh quan</p>
+                                    <div class="filter-list limited d-flex flex-column gap-1">
+                                        <label><input type="checkbox"> View biển</label>
+                                        <label><input type="checkbox"> View núi</label>
+                                        <label><input type="checkbox"> View thành phố</label>
+                                        <label><input type="checkbox"> View vườn</label>
+                                        <label><input type="checkbox"> Gần thiên nhiên</label>
+                                    </div>
+                                    <span class="toggle">Xem thêm</span>
+                                </div>
+
+                                <div class="filter-sub mt-3">
+                                    <p>Không gian trải nghiệm</p>
+                                    <div class="filter-list limited d-flex flex-column gap-1">
+                                        <label><input type="checkbox"> Góc sống ảo</label>
+                                        <label><input type="checkbox"> Decor hiện đại</label>
+                                        <label><input type="checkbox"> Decor vintage</label>
+                                        <label><input type="checkbox"> Không gian yên tĩnh</label>
+                                        <label><input type="checkbox"> Không gian thư giãn</label>
+                                        <label><input type="checkbox"> Phù hợp làm việc</label>
+                                    </div>
+                                    <span class="toggle">Xem thêm</span>
+                                </div>
+                            </div>
+
+                            <div class="filter-sub">
+                                <div class="filter-group p-3 border rounded mb-3">
+                                    <h4>Chính sách</h4>
+                                    <div class="filter-list limited d-flex flex-column gap-1">
+                                        <label><input type="checkbox"> Hủy miễn phí</label>
+                                        <label><input type="checkbox"> Không cần thẻ</label>
+                                        <label><input type="checkbox"> Thanh toán tại nơi ở</label>
+                                        <label><input type="checkbox"> Đặt trước trả sau</label>
+                                        <label><input type="checkbox"> Xuất hóa đơn điện tử</label>
+                                    </div>
+                                    <span class="toggle">Xem thêm</span>
+                                </div>
+                            </div>
+
+                            <button class="btn-filter btn-primary w-100">Lọc kết quả</button>
+
+                </aside>
+
+                <article class="col-lg-9 col-12">
+                    <h5 class="mt-4 mb-3 fw-bold">Danh sách phòng nổi bật</h5>
+                    <div id="topList" class="row g-3"></div>
+
+                    <h5 class="mt-4 mb-3 fw-bold">Danh sách phòng được yêu thích nhất</h5>
+                    <div id="middleList" class="row g-3"></div>
+
+                    <h5 class="mt-4 mb-3 fw-bold">Các phòng khác</h5>
+                    <div id="bottomList" class="row g-3"></div>
+                </article>
+
+        </section>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-md-4">
+                        <img src="../IMG/Logo.png" alt="Humastay Logo">
+                        <p>
+                            Cập nhật tin tức, ưu đãi và thông báo mới nhất từ Humastay.
+                        </p>
+
+                        <div class="sub">
+                            <input type="email" placeholder="Nhập email của bạn">
+                            <button>Đăng ký</button>
+                        </div>
+
+                    </div>
+
+                    <div class="col-md-3">
+                        <h6>Liên kết nhanh</h6>
+                        <a href="#">Trang chủ</a>
+                        <a href="#">Giới thiệu</a>
+                        <a href="#">Homestay</a>
+                        <a href="#">Liên hệ</a>
+                    </div>
+
+                    <div class="col-md-3">
+                        <h6>Dịch vụ</h6>
+                        <a href="#">Thiết kế phòng theo yêu cầu</a>
+                        <a href="#">Quản lý bất động sản</a>
+                        <a href="#">Đảm bảo an ninh</a>
+                        <a href="#">Thiết kế sơ bộ</a>
+                    </div>
+
+                    <div class="col-md-2">
+                        <h6>Pháp lý</h6>
+                        <a href="#">Chính sách đổi trả</a>
+                        <a href="#">Chính sách vận chuyển</a>
+                        <a href="#">Chính sách bảo mật</a>
+                        <a href="#">Điều khoản dịch vụ</a>
+                    </div>
                 </div>
 
-                <div class="d-flex justify-content-between mt-2 small text-muted">
-                  <span>0đ</span>
-                  <span>10.000.000đ</span>
+                <div class="footer-bottom">
+                    <div class="app">
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                    <div class="copy">
+                        © 2025 Humastay. All rights reserved.
+                    </div>
                 </div>
-              </div>
-
-              <div class="filter-group p-3 border rounded mb-3">
-                <h4>Loại phòng</h4>
-
-                <div class="filter-sub">
-                  <p>Phòng theo tiêu chuẩn chất lượng:</p>
-                  <div class="filter-list limited d-flex flex-column gap-1">
-                    <label><input type="checkbox"> Phòng Standard</label>
-                    <label><input type="checkbox"> Phòng Superior</label>
-                    <label><input type="checkbox"> Phòng Deluxe</label>
-                    <label><input type="checkbox"> Phòng Suite</label>
-                  </div>
-                  <span class="toggle">Xem thêm</span>
-                </div>
-
-                <div class="filter-sub mt-3">
-                  <p>Phòng theo tiêu chuẩn loại giường:</p>
-                  <div class="filter-list limited d-flex flex-column gap-1">
-                    <label><input type="checkbox"> Phòng Twin</label>
-                    <label><input type="checkbox"> Phòng Double</label>
-                    <label><input type="checkbox"> Phòng Triple</label>
-                    <label><input type="checkbox"> Phòng Family</label>
-                    <label><input type="checkbox"> Phòng Dorm</label>
-                  </div>
-                  <span class="toggle">Xem thêm</span>
-                </div>
-              </div>
-
-              <div class="p-3 border rounded mb-3">
-                <h4 class="mb-3">Đánh giá cao</h4>
-
-                <div class="form-check">
-                  <input class="form-check-input" type="checkbox" id="rate3">
-                  <label class="form-check-label text-warning" for="rate3">
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                  </label>
-                </div>
-
-                <div class="form-check">
-                  <input class="form-check-input" type="checkbox" id="rate4">
-                  <label class="form-check-label text-warning" for="rate4">
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                  </label>
-                </div>
-
-                <div class="form-check">
-                  <input class="form-check-input" type="checkbox" id="rate5">
-                  <label class="form-check-label text-warning" for="rate5">
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                  </label>
-                </div>
-              </div>
-
-              <div class="filter-group p-3 border rounded mb-3">
-                <h4>Dạng phòng</h4>
-
-                <div class="filter-list limited d-flex flex-column gap-1">
-                  <label><input type="checkbox"> Tất cả</label>
-                  <label><input type="checkbox"> Phòng thường</label>
-                  <label><input type="checkbox"> Phòng VIP</label>
-                </div>
-              </div>
-
-              <div class="filter-group p-3 border rounded mb-3">
-                <h4>Tiện nghi</h4>
-
-                <div class="filter-sub">
-                  <p>Tiện nghi phòng ở</p>
-                  <div class="filter-list limited d-flex flex-column gap-1">
-                    <label><input type="checkbox"> Giường, nệm, chăn, gối</label>
-                    <label><input type="checkbox"> Điều hòa / quạt</label>
-                    <label><input type="checkbox"> Tủ quần áo</label>
-                    <label><input type="checkbox"> Bàn làm việc</label>
-                    <label><input type="checkbox"> Két an toàn</label>
-                    <label><input type="checkbox"> Mini bar</label>
-                    <label><input type="checkbox"> Ấm đun nước</label>
-                    <label><input type="checkbox"> Máy sấy tóc</label>
-                    <label><input type="checkbox"> Gương trang điểm</label>
-                    <label><input type="checkbox"> Rèm cửa chống sáng</label>
-                    <label><input type="checkbox"> Ban công riêng</label>
-                    <label><input type="checkbox"> Cách âm</label>
-                  </div>
-                  <span class="toggle">Xem thêm</span>
-                </div>
-
-                <div class="filter-sub mt-3">
-                  <p>Tiện nghi phòng tắm</p>
-                  <div class="filter-list limited d-flex flex-column gap-1">
-                    <label><input type="checkbox"> Phòng tắm riêng</label>
-                    <label><input type="checkbox"> Nước nóng lạnh</label>
-                    <label><input type="checkbox"> Khăn tắm</label>
-                    <label><input type="checkbox"> Đồ vệ sinh cá nhân</label>
-                  </div>
-                  <span class="toggle">Xem thêm</span>
-                </div>
-
-                <div class="filter-sub mt-3">
-                  <p>Tiện nghi nhà bếp</p>
-                  <div class="filter-list limited d-flex flex-column gap-1">
-                    <label><input type="checkbox"> Bếp nấu ăn</label>
-                    <label><input type="checkbox"> Tủ lạnh</label>
-                    <label><input type="checkbox"> Lò vi sóng</label>
-                    <label><input type="checkbox"> Dụng cụ nấu ăn</label>
-                  </div>
-                  <span class="toggle">Xem thêm</span>
-                </div>
-
-                <div class="filter-sub mt-3">
-                  <p>Tiện nghi công nghệ</p>
-                  <div class="filter-list limited d-flex flex-column gap-1">
-                    <label><input type="checkbox"> Wi-Fi miễn phí</label>
-                    <label><input type="checkbox"> TV</label>
-                    <label><input type="checkbox"> Truyền hình cáp</label>
-                  </div>
-                  <span class="toggle">Xem thêm</span>
-                </div>
-
-                <div class="filter-sub mt-3">
-                  <p>Tiện ích hỗ trợ</p>
-                  <div class="filter-list limited d-flex flex-column gap-1">
-                    <label><input type="checkbox"> Máy giặt</label>
-                    <label><input type="checkbox"> Dọn phòng</label>
-                    <label><input type="checkbox"> Chỗ đậu xe</label>
-                    <label><input type="checkbox"> Máy pha cà phê</label>
-                  </div>
-                  <span class="toggle">Xem thêm</span>
-                </div>
-
-                <div class="filter-sub mt-3">
-                  <p>Giải trí</p>
-                  <div class="filter-list limited d-flex flex-column gap-1">
-                    <label><input type="checkbox"> Hồ bơi</label>
-                    <label><input type="checkbox"> BBQ</label>
-                    <label><input type="checkbox"> Karaoke</label>
-                    <label><input type="checkbox"> Boardgame</label>
-                  </div>
-                  <span class="toggle">Xem thêm</span>
-                </div>
-              </div>
-
-              <div class="filter-group p-3 border rounded mb-3">
-                <h4>Không gian</h4>
-
-                <div class="filter-sub">
-                  <p>Không gian bên trong</p>
-                  <div class="filter-list limited d-flex flex-column gap-1">
-                    <label><input type="checkbox"> Phòng ngủ riêng</label>
-                    <label><input type="checkbox"> Phòng khách</label>
-                    <label><input type="checkbox"> Khu bếp chung</label>
-                    <label><input type="checkbox"> Phòng ăn</label>
-                    <label><input type="checkbox"> Không gian làm việc</label>
-                    <label><input type="checkbox"> Phòng sinh hoạt chung</label>
-                  </div>
-                  <span class="toggle">Xem thêm</span>
-                </div>
-
-                <div class="filter-sub mt-3">
-                  <p>Không gian bên ngoài</p>
-                  <div class="filter-list limited d-flex flex-column gap-1">
-                    <label><input type="checkbox"> Ban công</label>
-                    <label><input type="checkbox"> Sân vườn</label>
-                    <label><input type="checkbox"> Sân thượng</label>
-                    <label><input type="checkbox"> Khu BBQ ngoài trời</label>
-                    <label><input type="checkbox"> Hồ bơi</label>
-                    <label><input type="checkbox"> Khu vực ngồi ngoài trời</label>
-                  </div>
-                  <span class="toggle">Xem thêm</span>
-                </div>
-
-                <div class="filter-sub mt-3">
-                  <p>Không gian cảnh quan</p>
-                  <div class="filter-list limited d-flex flex-column gap-1">
-                    <label><input type="checkbox"> View biển</label>
-                    <label><input type="checkbox"> View núi</label>
-                    <label><input type="checkbox"> View thành phố</label>
-                    <label><input type="checkbox"> View vườn</label>
-                    <label><input type="checkbox"> Gần thiên nhiên</label>
-                  </div>
-                  <span class="toggle">Xem thêm</span>
-                </div>
-
-                <div class="filter-sub mt-3">
-                  <p>Không gian trải nghiệm</p>
-                  <div class="filter-list limited d-flex flex-column gap-1">
-                    <label><input type="checkbox"> Góc sống ảo</label>
-                    <label><input type="checkbox"> Decor hiện đại</label>
-                    <label><input type="checkbox"> Decor vintage</label>
-                    <label><input type="checkbox"> Không gian yên tĩnh</label>
-                    <label><input type="checkbox"> Không gian thư giãn</label>
-                    <label><input type="checkbox"> Phù hợp làm việc</label>
-                  </div>
-                  <span class="toggle">Xem thêm</span>
-                </div>
-              </div>
-
-              <div class="filter-sub">
-                <div class="filter-group p-3 border rounded mb-3">
-                  <h4>Chính sách</h4>
-                  <div class="filter-list limited d-flex flex-column gap-1">
-                    <label><input type="checkbox"> Hủy miễn phí</label>
-                    <label><input type="checkbox"> Không cần thẻ</label>
-                    <label><input type="checkbox"> Thanh toán tại nơi ở</label>
-                    <label><input type="checkbox"> Đặt trước trả sau</label>
-                    <label><input type="checkbox"> Xuất hóa đơn điện tử</label>
-                  </div>
-                  <span class="toggle">Xem thêm</span>
-                </div>
-              </div>
-
-              <button class="btn-filter btn-primary w-100">Lọc kết quả</button>
-
-        </aside>
-
-        <article class="col-lg-9 col-12">
-          <h5 class="mt-4 mb-3 fw-bold">Danh sách phòng nổi bật</h5>
-          <div id="topList" class="row g-3"></div>
-
-          <h5 class="mt-4 mb-3 fw-bold">Danh sách phòng được yêu thích nhất</h5>
-          <div id="middleList" class="row g-3"></div>
-
-          <h5 class="mt-4 mb-3 fw-bold">Các phòng khác</h5>
-          <div id="bottomList" class="row g-3"></div>
-        </article>
-
-    </section>
-
-    <footer class="footer">
-      <div class="container">
-        <div class="row">
-
-          <div class="col-md-4">
-            <img src="../IMG/Logo.png" alt="Humastay Logo">
-            <p>
-              Cập nhật tin tức, ưu đãi và thông báo mới nhất từ Humastay.
-            </p>
-
-            <div class="sub">
-              <input type="email" placeholder="Nhập email của bạn">
-              <button>Đăng ký</button>
             </div>
-
-          </div>
-
-          <div class="col-md-3">
-            <h6>Liên kết nhanh</h6>
-            <a href="#">Trang chủ</a>
-            <a href="#">Giới thiệu</a>
-            <a href="#">Homestay</a>
-            <a href="#">Liên hệ</a>
-          </div>
-
-          <div class="col-md-3">
-            <h6>Dịch vụ</h6>
-            <a href="#">Thiết kế phòng theo yêu cầu</a>
-            <a href="#">Quản lý bất động sản</a>
-            <a href="#">Đảm bảo an ninh</a>
-            <a href="#">Thiết kế sơ bộ</a>
-          </div>
-
-          <div class="col-md-2">
-            <h6>Pháp lý</h6>
-            <a href="#">Chính sách đổi trả</a>
-            <a href="#">Chính sách vận chuyển</a>
-            <a href="#">Chính sách bảo mật</a>
-            <a href="#">Điều khoản dịch vụ</a>
-          </div>
-        </div>
-
-        <div class="footer-bottom">
-          <div class="app">
-            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-            <a href="#"><i class="fa-brands fa-instagram"></i></a>
-            <a href="#"><i class="fa-brands fa-twitter"></i></a>
-            <a href="#"><i class="fa-brands fa-youtube"></i></a>
-          </div>
-          <div class="copy">
-            © 2025 Humastay. All rights reserved.
-          </div>
-        </div>
-      </div>
-    </footer>
-  </div>
-
-  <script>
-    const menuToggle = document.getElementById('menuToggle');
-    const navMenu = document.getElementById('navMenu');
-
-    menuToggle.addEventListener('click', function (e) {
-      e.stopPropagation();
-      menuToggle.classList.toggle('active');
-      navMenu.classList.toggle('active');
-    });
-
-    document.querySelectorAll('.nav-menu a').forEach(link => {
-      link.addEventListener('click', function () {
-        menuToggle.classList.remove('active');
-        navMenu.classList.remove('active');
-      });
-    });
-
-    document.addEventListener('click', function (e) {
-      if (!e.target.closest('.nav-container')) {
-        menuToggle.classList.remove('active');
-        navMenu.classList.remove('active');
-      }
-    });
-
-    window.addEventListener('scroll', function () {
-      menuToggle.classList.remove('active');
-      navMenu.classList.remove('active');
-    });
-  </script>
+        </footer>
+    </div>
 </body>
 
 <div class="offcanvas offcanvas-start" tabindex="-1" id="filterSidebar">
 
-  <div class="offcanvas-header">
-    <h5 class="offcanvas-title">Bộ lọc</h5>
-    <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
-  </div>
-
-  <div class="offcanvas-body">
-
-    <div class="sidebar">
-
-      <div class="card mb-3">
-        <div class="card-body">
-          <h5>Giá mỗi đêm</h5>
-
-          <div class="d-flex gap-2">
-            <input type="number" class="form-control" placeholder="Từ (VNĐ)">
-            <input type="number" class="form-control" placeholder="Đến (VNĐ)">
-          </div>
-        </div>
-      </div>
-
-      <div class="filter-group p-3 border rounded mb-3">
-        <h4>Loại phòng</h4>
-
-        <div class="filter-sub">
-          <p>Phòng theo tiêu chuẩn chất lượng:</p>
-          <div class="filter-list limited d-flex flex-column gap-1">
-            <label><input type="checkbox"> Phòng Standard</label>
-            <label><input type="checkbox"> Phòng Superior</label>
-            <label><input type="checkbox"> Phòng Deluxe</label>
-            <label><input type="checkbox"> Phòng Suite</label>
-          </div>
-          <span class="toggle">Xem thêm</span>
-        </div>
-
-        <div class="filter-sub mt-3">
-          <p>Phòng theo tiêu chuẩn loại giường:</p>
-          <div class="filter-list limited d-flex flex-column gap-1">
-            <label><input type="checkbox"> Phòng Twin</label>
-            <label><input type="checkbox"> Phòng Double</label>
-            <label><input type="checkbox"> Phòng Triple</label>
-            <label><input type="checkbox"> Phòng Family</label>
-            <label><input type="checkbox"> Phòng Dorm</label>
-          </div>
-          <span class="toggle">Xem thêm</span>
-        </div>
-      </div>
-
-      <div class="p-3 border rounded mb-3">
-        <h4 class="mb-3">Đánh giá cao</h4>
-
-        <div class="form-check">
-          <input class="form-check-input" type="checkbox" id="rate3">
-          <label class="form-check-label text-warning" for="rate3">
-            <i class="bi bi-star-fill"></i>
-            <i class="bi bi-star-fill"></i>
-            <i class="bi bi-star-fill"></i>
-          </label>
-        </div>
-
-        <div class="form-check">
-          <input class="form-check-input" type="checkbox" id="rate4">
-          <label class="form-check-label text-warning" for="rate4">
-            <i class="bi bi-star-fill"></i>
-            <i class="bi bi-star-fill"></i>
-            <i class="bi bi-star-fill"></i>
-            <i class="bi bi-star-fill"></i>
-          </label>
-        </div>
-
-        <div class="form-check">
-          <input class="form-check-input" type="checkbox" id="rate5">
-          <label class="form-check-label text-warning" for="rate5">
-            <i class="bi bi-star-fill"></i>
-            <i class="bi bi-star-fill"></i>
-            <i class="bi bi-star-fill"></i>
-            <i class="bi bi-star-fill"></i>
-            <i class="bi bi-star-fill"></i>
-          </label>
-        </div>
-      </div>
-
-      <div class="filter-group p-3 border rounded mb-3">
-        <h4>Dạng phòng</h4>
-
-        <div class="filter-list limited d-flex flex-column gap-1">
-          <label><input type="checkbox"> Tất cả</label>
-          <label><input type="checkbox"> Phòng thường</label>
-          <label><input type="checkbox"> Phòng VIP</label>
-        </div>
-      </div>
-
-      <div class="filter-group p-3 border rounded mb-3">
-        <h4>Tiện nghi</h4>
-
-        <div class="filter-sub">
-          <p>Tiện nghi phòng ở</p>
-          <div class="filter-list limited d-flex flex-column gap-1">
-            <label><input type="checkbox"> Giường, nệm, chăn, gối</label>
-            <label><input type="checkbox"> Điều hòa / quạt</label>
-            <label><input type="checkbox"> Tủ quần áo</label>
-            <label><input type="checkbox"> Bàn làm việc</label>
-            <label><input type="checkbox"> Két an toàn</label>
-            <label><input type="checkbox"> Mini bar</label>
-            <label><input type="checkbox"> Ấm đun nước</label>
-            <label><input type="checkbox"> Máy sấy tóc</label>
-            <label><input type="checkbox"> Gương trang điểm</label>
-            <label><input type="checkbox"> Rèm cửa chống sáng</label>
-            <label><input type="checkbox"> Ban công riêng</label>
-            <label><input type="checkbox"> Cách âm</label>
-          </div>
-          <span class="toggle">Xem thêm</span>
-        </div>
-
-        <div class="filter-sub mt-3">
-          <p>Tiện nghi phòng tắm</p>
-          <div class="filter-list limited d-flex flex-column gap-1">
-            <label><input type="checkbox"> Phòng tắm riêng</label>
-            <label><input type="checkbox"> Nước nóng lạnh</label>
-            <label><input type="checkbox"> Khăn tắm</label>
-            <label><input type="checkbox"> Đồ vệ sinh cá nhân</label>
-          </div>
-          <span class="toggle">Xem thêm</span>
-        </div>
-
-        <div class="filter-sub mt-3">
-          <p>Tiện nghi nhà bếp</p>
-          <div class="filter-list limited d-flex flex-column gap-1">
-            <label><input type="checkbox"> Bếp nấu ăn</label>
-            <label><input type="checkbox"> Tủ lạnh</label>
-            <label><input type="checkbox"> Lò vi sóng</label>
-            <label><input type="checkbox"> Dụng cụ nấu ăn</label>
-          </div>
-          <span class="toggle">Xem thêm</span>
-        </div>
-
-        <div class="filter-sub mt-3">
-          <p>Tiện nghi công nghệ</p>
-          <div class="filter-list limited d-flex flex-column gap-1">
-            <label><input type="checkbox"> Wi-Fi miễn phí</label>
-            <label><input type="checkbox"> TV</label>
-            <label><input type="checkbox"> Truyền hình cáp</label>
-          </div>
-          <span class="toggle">Xem thêm</span>
-        </div>
-
-        <div class="filter-sub mt-3">
-          <p>Tiện ích hỗ trợ</p>
-          <div class="filter-list limited d-flex flex-column gap-1">
-            <label><input type="checkbox"> Máy giặt</label>
-            <label><input type="checkbox"> Dọn phòng</label>
-            <label><input type="checkbox"> Chỗ đậu xe</label>
-            <label><input type="checkbox"> Máy pha cà phê</label>
-          </div>
-          <span class="toggle">Xem thêm</span>
-        </div>
-
-        <div class="filter-sub mt-3">
-          <p>Giải trí</p>
-          <div class="filter-list limited d-flex flex-column gap-1">
-            <label><input type="checkbox"> Hồ bơi</label>
-            <label><input type="checkbox"> BBQ</label>
-            <label><input type="checkbox"> Karaoke</label>
-            <label><input type="checkbox"> Boardgame</label>
-          </div>
-          <span class="toggle">Xem thêm</span>
-        </div>
-      </div>
-
-      <div class="filter-group p-3 border rounded mb-3">
-        <h4>Không gian</h4>
-
-        <div class="filter-sub">
-          <p>Không gian bên trong</p>
-          <div class="filter-list limited d-flex flex-column gap-1">
-            <label><input type="checkbox"> Phòng ngủ riêng</label>
-            <label><input type="checkbox"> Phòng khách</label>
-            <label><input type="checkbox"> Khu bếp chung</label>
-            <label><input type="checkbox"> Phòng ăn</label>
-            <label><input type="checkbox"> Không gian làm việc</label>
-            <label><input type="checkbox"> Phòng sinh hoạt chung</label>
-          </div>
-          <span class="toggle">Xem thêm</span>
-        </div>
-
-        <div class="filter-sub mt-3">
-          <p>Không gian bên ngoài</p>
-          <div class="filter-list limited d-flex flex-column gap-1">
-            <label><input type="checkbox"> Ban công</label>
-            <label><input type="checkbox"> Sân vườn</label>
-            <label><input type="checkbox"> Sân thượng</label>
-            <label><input type="checkbox"> Khu BBQ ngoài trời</label>
-            <label><input type="checkbox"> Hồ bơi</label>
-            <label><input type="checkbox"> Khu vực ngồi ngoài trời</label>
-          </div>
-          <span class="toggle">Xem thêm</span>
-        </div>
-
-        <div class="filter-sub mt-3">
-          <p>Không gian cảnh quan</p>
-          <div class="filter-list limited d-flex flex-column gap-1">
-            <label><input type="checkbox"> View biển</label>
-            <label><input type="checkbox"> View núi</label>
-            <label><input type="checkbox"> View thành phố</label>
-            <label><input type="checkbox"> View vườn</label>
-            <label><input type="checkbox"> Gần thiên nhiên</label>
-          </div>
-          <span class="toggle">Xem thêm</span>
-        </div>
-
-        <div class="filter-sub mt-3">
-          <p>Không gian trải nghiệm</p>
-          <div class="filter-list limited d-flex flex-column gap-1">
-            <label><input type="checkbox"> Góc sống ảo</label>
-            <label><input type="checkbox"> Decor hiện đại</label>
-            <label><input type="checkbox"> Decor vintage</label>
-            <label><input type="checkbox"> Không gian yên tĩnh</label>
-            <label><input type="checkbox"> Không gian thư giãn</label>
-            <label><input type="checkbox"> Phù hợp làm việc</label>
-          </div>
-          <span class="toggle">Xem thêm</span>
-        </div>
-      </div>
-
-      <div class="filter-sub">
-        <div class="filter-group p-3 border rounded mb-3">
-          <h4>Chính sách</h4>
-          <div class="filter-list limited d-flex flex-column gap-1">
-            <label><input type="checkbox"> Hủy miễn phí</label>
-            <label><input type="checkbox"> Không cần thẻ</label>
-            <label><input type="checkbox"> Thanh toán tại nơi ở</label>
-            <label><input type="checkbox"> Đặt trước trả sau</label>
-            <label><input type="checkbox"> Xuất hóa đơn điện tử</label>
-          </div>
-          <span class="toggle">Xem thêm</span>
-        </div>
-      </div>
-
-      <button id="applyFilterBtn" class="btn-filter btn-primary w-100">Lọc kết quả</button>
-
+    <div class="offcanvas-header">
+        <h5 class="offcanvas-title">Bộ lọc</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
     </div>
 
-  </div>
+    <div class="offcanvas-body">
+
+        <div class="sidebar">
+
+            <div class="card mb-3">
+                <div class="card-body">
+                    <h5>Giá mỗi đêm</h5>
+
+                    <div class="d-flex gap-2">
+                        <input type="number" class="form-control" placeholder="Từ (VNĐ)">
+                        <input type="number" class="form-control" placeholder="Đến (VNĐ)">
+                    </div>
+                </div>
+            </div>
+
+            <div class="filter-group p-3 border rounded mb-3">
+                <h4>Loại phòng</h4>
+
+                <div class="filter-sub">
+                    <p>Phòng theo tiêu chuẩn chất lượng:</p>
+                    <div class="filter-list limited d-flex flex-column gap-1">
+                        <label><input type="checkbox"> Phòng Standard</label>
+                        <label><input type="checkbox"> Phòng Superior</label>
+                        <label><input type="checkbox"> Phòng Deluxe</label>
+                        <label><input type="checkbox"> Phòng Suite</label>
+                    </div>
+                    <span class="toggle">Xem thêm</span>
+                </div>
+
+                <div class="filter-sub mt-3">
+                    <p>Phòng theo tiêu chuẩn loại giường:</p>
+                    <div class="filter-list limited d-flex flex-column gap-1">
+                        <label><input type="checkbox"> Phòng Twin</label>
+                        <label><input type="checkbox"> Phòng Double</label>
+                        <label><input type="checkbox"> Phòng Triple</label>
+                        <label><input type="checkbox"> Phòng Family</label>
+                        <label><input type="checkbox"> Phòng Dorm</label>
+                    </div>
+                    <span class="toggle">Xem thêm</span>
+                </div>
+            </div>
+
+            <div class="p-3 border rounded mb-3">
+                <h4 class="mb-3">Đánh giá cao</h4>
+
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="rate3">
+                    <label class="form-check-label text-warning" for="rate3">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                    </label>
+                </div>
+
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="rate4">
+                    <label class="form-check-label text-warning" for="rate4">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                    </label>
+                </div>
+
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="rate5">
+                    <label class="form-check-label text-warning" for="rate5">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                    </label>
+                </div>
+            </div>
+
+            <div class="filter-group p-3 border rounded mb-3">
+                <h4>Dạng phòng</h4>
+
+                <div class="filter-list limited d-flex flex-column gap-1">
+                    <label><input type="checkbox"> Tất cả</label>
+                    <label><input type="checkbox"> Phòng thường</label>
+                    <label><input type="checkbox"> Phòng VIP</label>
+                </div>
+            </div>
+
+            <div class="filter-group p-3 border rounded mb-3">
+                <h4>Tiện nghi</h4>
+
+                <div class="filter-sub">
+                    <p>Tiện nghi phòng ở</p>
+                    <div class="filter-list limited d-flex flex-column gap-1">
+                        <label><input type="checkbox"> Giường, nệm, chăn, gối</label>
+                        <label><input type="checkbox"> Điều hòa / quạt</label>
+                        <label><input type="checkbox"> Tủ quần áo</label>
+                        <label><input type="checkbox"> Bàn làm việc</label>
+                        <label><input type="checkbox"> Két an toàn</label>
+                        <label><input type="checkbox"> Mini bar</label>
+                        <label><input type="checkbox"> Ấm đun nước</label>
+                        <label><input type="checkbox"> Máy sấy tóc</label>
+                        <label><input type="checkbox"> Gương trang điểm</label>
+                        <label><input type="checkbox"> Rèm cửa chống sáng</label>
+                        <label><input type="checkbox"> Ban công riêng</label>
+                        <label><input type="checkbox"> Cách âm</label>
+                    </div>
+                    <span class="toggle">Xem thêm</span>
+                </div>
+
+                <div class="filter-sub mt-3">
+                    <p>Tiện nghi phòng tắm</p>
+                    <div class="filter-list limited d-flex flex-column gap-1">
+                        <label><input type="checkbox"> Phòng tắm riêng</label>
+                        <label><input type="checkbox"> Nước nóng lạnh</label>
+                        <label><input type="checkbox"> Khăn tắm</label>
+                        <label><input type="checkbox"> Đồ vệ sinh cá nhân</label>
+                    </div>
+                    <span class="toggle">Xem thêm</span>
+                </div>
+
+                <div class="filter-sub mt-3">
+                    <p>Tiện nghi nhà bếp</p>
+                    <div class="filter-list limited d-flex flex-column gap-1">
+                        <label><input type="checkbox"> Bếp nấu ăn</label>
+                        <label><input type="checkbox"> Tủ lạnh</label>
+                        <label><input type="checkbox"> Lò vi sóng</label>
+                        <label><input type="checkbox"> Dụng cụ nấu ăn</label>
+                    </div>
+                    <span class="toggle">Xem thêm</span>
+                </div>
+
+                <div class="filter-sub mt-3">
+                    <p>Tiện nghi công nghệ</p>
+                    <div class="filter-list limited d-flex flex-column gap-1">
+                        <label><input type="checkbox"> Wi-Fi miễn phí</label>
+                        <label><input type="checkbox"> TV</label>
+                        <label><input type="checkbox"> Truyền hình cáp</label>
+                    </div>
+                    <span class="toggle">Xem thêm</span>
+                </div>
+
+                <div class="filter-sub mt-3">
+                    <p>Tiện ích hỗ trợ</p>
+                    <div class="filter-list limited d-flex flex-column gap-1">
+                        <label><input type="checkbox"> Máy giặt</label>
+                        <label><input type="checkbox"> Dọn phòng</label>
+                        <label><input type="checkbox"> Chỗ đậu xe</label>
+                        <label><input type="checkbox"> Máy pha cà phê</label>
+                    </div>
+                    <span class="toggle">Xem thêm</span>
+                </div>
+
+                <div class="filter-sub mt-3">
+                    <p>Giải trí</p>
+                    <div class="filter-list limited d-flex flex-column gap-1">
+                        <label><input type="checkbox"> Hồ bơi</label>
+                        <label><input type="checkbox"> BBQ</label>
+                        <label><input type="checkbox"> Karaoke</label>
+                        <label><input type="checkbox"> Boardgame</label>
+                    </div>
+                    <span class="toggle">Xem thêm</span>
+                </div>
+            </div>
+
+            <div class="filter-group p-3 border rounded mb-3">
+                <h4>Không gian</h4>
+
+                <div class="filter-sub">
+                    <p>Không gian bên trong</p>
+                    <div class="filter-list limited d-flex flex-column gap-1">
+                        <label><input type="checkbox"> Phòng ngủ riêng</label>
+                        <label><input type="checkbox"> Phòng khách</label>
+                        <label><input type="checkbox"> Khu bếp chung</label>
+                        <label><input type="checkbox"> Phòng ăn</label>
+                        <label><input type="checkbox"> Không gian làm việc</label>
+                        <label><input type="checkbox"> Phòng sinh hoạt chung</label>
+                    </div>
+                    <span class="toggle">Xem thêm</span>
+                </div>
+
+                <div class="filter-sub mt-3">
+                    <p>Không gian bên ngoài</p>
+                    <div class="filter-list limited d-flex flex-column gap-1">
+                        <label><input type="checkbox"> Ban công</label>
+                        <label><input type="checkbox"> Sân vườn</label>
+                        <label><input type="checkbox"> Sân thượng</label>
+                        <label><input type="checkbox"> Khu BBQ ngoài trời</label>
+                        <label><input type="checkbox"> Hồ bơi</label>
+                        <label><input type="checkbox"> Khu vực ngồi ngoài trời</label>
+                    </div>
+                    <span class="toggle">Xem thêm</span>
+                </div>
+
+                <div class="filter-sub mt-3">
+                    <p>Không gian cảnh quan</p>
+                    <div class="filter-list limited d-flex flex-column gap-1">
+                        <label><input type="checkbox"> View biển</label>
+                        <label><input type="checkbox"> View núi</label>
+                        <label><input type="checkbox"> View thành phố</label>
+                        <label><input type="checkbox"> View vườn</label>
+                        <label><input type="checkbox"> Gần thiên nhiên</label>
+                    </div>
+                    <span class="toggle">Xem thêm</span>
+                </div>
+
+                <div class="filter-sub mt-3">
+                    <p>Không gian trải nghiệm</p>
+                    <div class="filter-list limited d-flex flex-column gap-1">
+                        <label><input type="checkbox"> Góc sống ảo</label>
+                        <label><input type="checkbox"> Decor hiện đại</label>
+                        <label><input type="checkbox"> Decor vintage</label>
+                        <label><input type="checkbox"> Không gian yên tĩnh</label>
+                        <label><input type="checkbox"> Không gian thư giãn</label>
+                        <label><input type="checkbox"> Phù hợp làm việc</label>
+                    </div>
+                    <span class="toggle">Xem thêm</span>
+                </div>
+            </div>
+
+            <div class="filter-sub">
+                <div class="filter-group p-3 border rounded mb-3">
+                    <h4>Chính sách</h4>
+                    <div class="filter-list limited d-flex flex-column gap-1">
+                        <label><input type="checkbox"> Hủy miễn phí</label>
+                        <label><input type="checkbox"> Không cần thẻ</label>
+                        <label><input type="checkbox"> Thanh toán tại nơi ở</label>
+                        <label><input type="checkbox"> Đặt trước trả sau</label>
+                        <label><input type="checkbox"> Xuất hóa đơn điện tử</label>
+                    </div>
+                    <span class="toggle">Xem thêm</span>
+                </div>
+            </div>
+
+            <button id="applyFilterBtn" class="btn-filter btn-primary w-100">Lọc kết quả</button>
+
+        </div>
+
+    </div>
 </div>
 <script src="../JS/bootstrap.bundle.min.js"></script>
 <script src="../JS/Phong.js"></script>
-
 
 </html>

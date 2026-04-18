@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-    const data = JSON.parse(localStorage.getItem("selectedRoom"));
+    const data = JSON.parse(sessionStorage.getItem("selectedRoom"));
     if (data) {
         document.getElementById("display-name").innerText = data.name;
         document.getElementById("display-price").innerText = data.price;
@@ -8,7 +8,18 @@ document.addEventListener("DOMContentLoaded", function () {
         document.getElementById("display-checkin").innerText = data.checkIn;
         document.getElementById("display-checkout").innerText = data.checkOut;
         document.getElementById("display-guests").innerText = data.guests;
+
+        const tagHTML = data.tags.map(t =>
+            `<span class="badge bg-secondary me-1 mb-1">${t}</span>`
+        ).join("");
+        const tagContainer = document.getElementById("room-tags");
+        const amenityContainer = document.getElementById("amenity-container");
+
+        if (tagContainer) tagContainer.innerHTML = tagHTML;
+        if (amenityContainer) amenityContainer.innerHTML = tagHTML;
     }
+
+
 
     const reviews = [
         { name: "Anh Hoàng", comment: "Không gian cực kỳ yên tĩnh, decor vintage rất hợp để chụp ảnh sống ảo. Nhân viên nhiệt tình hỗ trợ 24/7." },
@@ -25,19 +36,16 @@ document.addEventListener("DOMContentLoaded", function () {
         reviewContainer.innerHTML += `
         <div class="review-item p-3 border rounded mb-3 bg-light">
             <b>${r.name}</b>
-            <span class="text-warning ms-2">⭐⭐⭐⭐⭐</span>
+            <span class="text-warning ms-2">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+            </span>
             <p class="small text-muted mt-1 mb-0">"${r.comment}"</p>
         </div>`;
     });
-
-    const amenityContainer = document.getElementById("amenity-container");
-
-    if (typeof getFullTags === "function") {
-        const tags = getFullTags();
-        amenityContainer.innerHTML = tags.map(t =>
-            `<span class="badge bg-light text-dark border">${t}</span>`
-        ).join("");
-    }
 
     if (document.getElementById("bottomList") && typeof createHorizontalCard === "function") {
         for (let i = 11; i <= 20; i++) {
