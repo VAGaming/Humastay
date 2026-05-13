@@ -62,5 +62,5 @@ loginForm.addEventListener('submit', function (e) {
         return;
     }
 
-   
+     window.location.href = "../index.html";
 });
