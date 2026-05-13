@@ -132,30 +132,30 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     document.addEventListener("click", function (e) {
-        if (e.target.classList.contains("view-btn")) {
-            const savedSearch = JSON.parse(sessionStorage.getItem("currentSearch"));
-
-            if (!savedSearch) {
-                alert("Vui lòng nhập thông tin và nhấn nút Tìm kiếm trước");
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-                return;
-            }
-
-            const card = e.target.closest(".card");
-            const tags = JSON.parse(card.getAttribute("data-tags"));
-            const roomData = {
-                name: card.querySelector("h4, h5").innerText,
-                price: card.querySelector(".text-danger").innerText,
-                rating: (card.querySelector(".text-primary") || card.querySelector(".rating")).innerText,
-                checkIn: savedSearch.checkIn,
-                checkOut: savedSearch.checkOut,
-                guests: savedSearch.guests,
-                tags: tags
-            };
-
-            sessionStorage.setItem("selectedRoom", JSON.stringify(roomData));
-            window.location.href = "../HTML/ChiTietPhong.html";
+        const btn = e.target.closest(".view-btn");
+        if (!btn) return;
+        const savedSearch = JSON.parse(sessionStorage.getItem("currentSearch"));
+        if (!savedSearch) {
+            alert("Vui lòng nhập thông tin và nhấn nút Tìm kiếm trước");
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+            return;
         }
+        const card = btn.closest(".card");
+        const tags = JSON.parse(card.getAttribute("data-tags"));
+        const roomData = {
+            name: card.querySelector("h4, h5, h6").innerText,
+            price: card.querySelector(".text-danger").innerText,
+            rating: (card.querySelector(".text-primary") || card.querySelector(".position-absolute")).innerText,
+            checkIn: savedSearch.checkIn,
+            checkOut: savedSearch.checkOut,
+            guests: savedSearch.guests,
+            tags: tags
+        };
+        sessionStorage.setItem("selectedRoom",JSON.stringify(roomData));
+        window.location.href = "../HTML/ChiTietPhong.html";
     });
 
     document.getElementById("applyFilterBtn").addEventListener("click", function () {
@@ -180,6 +180,34 @@ document.addEventListener("DOMContentLoaded", function () {
     for (let i = 11; i <= 20; i++) {
         bottomList.innerHTML += createHorizontalCard(i);
     }
+
+    const menuToggle = document.getElementById('menuToggle');
+    const navMenu = document.getElementById('navMenu');
+
+    menuToggle.addEventListener('click', function (e) {
+        e.stopPropagation();
+        menuToggle.classList.toggle('active');
+        navMenu.classList.toggle('active');
+    });
+
+    document.querySelectorAll('.nav-menu a').forEach(link => {
+        link.addEventListener('click', function () {
+            menuToggle.classList.remove('active');
+            navMenu.classList.remove('active');
+        });
+    });
+
+    document.addEventListener('click', function (e) {
+        if (!e.target.closest('.nav-container')) {
+            menuToggle.classList.remove('active');
+            navMenu.classList.remove('active');
+        }
+    });
+
+    window.addEventListener('scroll', function () {
+        menuToggle.classList.remove('active');
+        navMenu.classList.remove('active');
+    });
 });
 
 let room = 1;
