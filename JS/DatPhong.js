@@ -171,5 +171,5 @@ function changePayMethod(el) {
 
 function completeBooking() {
     alert("Cảm ơn bạn! Đơn đặt phòng đã hoàn tất.");
-    window.location.href = "../HTML/index.html";
+    window.location.href = "../index.html";
 }
