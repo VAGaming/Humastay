@@ -1,146 +1,116 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="../CSS/login.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
 
-    <title>LOG IN</title>
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="../CSS/login.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 
-  <body>
-    <div class="container">
-      <div class="main-wrapper p-0 h-100">
-        <div class="back">
-          <a href="../index.html" style="color: white"
-            ><i class="fas fa-arrow-left" style="font-size: 1.5rem"></i
-          ></a>
-        </div>
-        <div class="row h-100">
-          <div
-            class="col-lg-6 left-section d-flex flex-column justify-content-center"
-          >
-            <p class="badge-tag">HUMASTAY XIN CHÀO</p>
-            <h1 class="main-title">
-              Địa Điểm <span class="highlight">Nghỉ Dưỡng Hoàn Hảo</span> Đang
-              Chờ Bạn.
-            </h1>
-            <p class="description">
-              Trải nghiệm những homestay được chọn lọc kỹ lưỡng, vừa tiện nghi
-              vừa đậm chất con người. Hành trình nghỉ dưỡng tuyệt vời của bạn
-              bắt đầu tại đây.
-            </p>
+  <title>LOG IN</title>
+</head>
 
-            <div class="stats-container">
-              <div class="stat-item">
-                <div class="stat-number">12k+</div>
-                <div class="stat-label">KHÔNG GIAN SANG TRỌNG</div>
-              </div>
-              <div class="stat-item">
-                <div class="stat-number">4.9/5</div>
-                <div class="stat-label">ĐÁNH GIÁ</div>
-              </div>
-              <div class="stat-item">
-                <div class="stat-number">24/7</div>
-                <div class="stat-label">HỖ TRỢ</div>
-              </div>
+<body>
+  <div class="container">
+    <div class="main-wrapper p-0 h-100">
+      <div class="back">
+        <a href="../index.html" style="color: white"><i class="fas fa-arrow-left" style="font-size: 1.5rem"></i></a>
+      </div>
+      <div class="row h-100">
+        <div class="col-lg-6 left-section d-flex flex-column justify-content-center">
+          <p class="badge-tag">HUMASTAY XIN CHÀO</p>
+          <h1 class="main-title">
+            Địa Điểm <span class="highlight">Nghỉ Dưỡng Hoàn Hảo</span> Đang
+            Chờ Bạn.
+          </h1>
+          <p class="description">
+            Trải nghiệm những homestay được chọn lọc kỹ lưỡng, vừa tiện nghi
+            vừa đậm chất con người. Hành trình nghỉ dưỡng tuyệt vời của bạn
+            bắt đầu tại đây.
+          </p>
+
+          <div class="stats-container">
+            <div class="stat-item">
+              <div class="stat-number">12k+</div>
+              <div class="stat-label">KHÔNG GIAN SANG TRỌNG</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number">4.9/5</div>
+              <div class="stat-label">ĐÁNH GIÁ</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number">24/7</div>
+              <div class="stat-label">HỖ TRỢ</div>
             </div>
           </div>
+        </div>
 
-          <!-- FORM ĐĂNG NHẬP -->
-          <div
-            class="col-lg-6 right-section d-flex align-items-center justify-content-center"
-          >
-            <div class="login-card">
-              <h2 class="login-title">Chào mừng trở lại!</h2>
-              <p class="login-subtitle">
-                Tiếp tục hành trình khám phá những không gian nghỉ dưỡng sang
-                trọng.
-              </p>
+        <!-- FORM ĐĂNG NHẬP -->
+        <div class="col-lg-6 right-section d-flex align-items-center justify-content-center">
+          <div class="login-card">
+            <h2 class="login-title">Chào mừng trở lại!</h2>
+            <p class="login-subtitle">
+              Tiếp tục hành trình khám phá những không gian nghỉ dưỡng sang
+              trọng.
+            </p>
 
-              <form>
-                <div class="form-group">
-                  <label for="email" class="form-label">EMAIL:</label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="email"
-                    placeholder="nguyenvana@gmail.com"
-                  />
-                </div>
-
-                <div class="form-group">
-                  <div class="d-flex justify-content-between">
-                    <label for="password" class="form-label">MẬT KHẨU</label>
-                    <a href="#" class="forgot-password">QUÊN MẬT KHẨU?</a>
-                  </div>
-                  <div class="password-input">
-                    <input
-                      type="password"
-                      class="form-control"
-                      id="password"
-                      placeholder="••••••••"
-                    />
-                  </div>
-                </div>
-
-                <div class="form-check mt-4">
-                  <input
-                    type="checkbox"
-                    class="form-check-input"
-                    id="staySignedIn"
-                  />
-                  <label class="form-check-label" for="staySignedIn">
-                    Lưu mật khẩu
-                  </label>
-                </div>
-
-                <button
-                  id="btn-log"
-                  type="submit"
-                  class="btn-login btn-block mt-4"
-                >
-                  ĐĂNG NHẬP
-                </button>
-              </form>
-
-              <div class="or-divider">HOẶC</div>
-
-              <div class="social-buttons">
-                <button class="social">Google</button>
-                <button class="social">Apple</button>
+            <form>
+              <div class="form-group">
+                <label for="email" class="form-label">EMAIL:</label>
+                <input type="text" class="form-control" id="email" placeholder="nguyenvana@gmail.com" />
               </div>
 
-              <p class="create-account">
-                Chưa có tài khoản?
-                <a href="..//HTML/dangky.html" class="create-link"
-                  >Tạo tài khoản mới</a
-                >
-              </p>
+              <div class="form-group">
+                <div class="d-flex justify-content-between">
+                  <label for="password" class="form-label">MẬT KHẨU</label>
+                  <a href="#" class="forgot-password">QUÊN MẬT KHẨU?</a>
+                </div>
+                <div class="password-input">
+                  <input type="password" class="form-control" id="password" placeholder="••••••••" />
+                </div>
+              </div>
+
+              <div class="form-check mt-4">
+                <input type="checkbox" class="form-check-input" id="staySignedIn" />
+                <label class="form-check-label" for="staySignedIn">
+                  Lưu mật khẩu
+                </label>
+              </div>
+
+              <button id="btn-log" type="submit" class="btn-login btn-block mt-4">
+                ĐĂNG NHẬP
+              </button>
+            </form>
+
+            <div class="or-divider">HOẶC</div>
+
+            <div class="social-buttons">
+              <button class="social">Google</button>
+              <button class="social">Apple</button>
             </div>
+
+            <p class="create-account">
+              Chưa có tài khoản?
+              <a href="..//HTML/dangky.html" class="create-link">Tạo tài khoản mới</a>
+            </p>
           </div>
         </div>
       </div>
     </div>
+  </div>
 
-    <!-- FOOTER -->
-    <footer class="footer">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-12">
-            <p class="footer-text">© 2024 HUMASTAY. THE DIGITAL CONCIERGE.</p>
-          </div>
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12">
+          <p class="footer-text">© 2024 HUMASTAY. THE DIGITAL CONCIERGE.</p>
         </div>
       </div>
-    </footer>
-    <script src="../JS/main.js"></script>
-  </body>
+    </div>
+  </footer>
+  <script src="../JS/main.js"></script>
+</body>
+
 </html>

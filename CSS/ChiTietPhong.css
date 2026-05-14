@@ -129,6 +129,154 @@ body {
   width: 100%;
 }
 
+@media (max-width: 1200px) {
+  .nav-container {
+    width: 85%;
+  }
+
+  .nav-menu {
+    gap: 28px;
+  }
+
+  .nav-menu a {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .nav-container {
+    width: 90%;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+
+  .nav-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    flex-direction: column;
+    gap: 0;
+    background: rgba(240, 245, 240, 0.99);
+    border-top: 1px solid #ddd;
+    padding: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+    z-index: 999;
+    text-align: center;
+  }
+
+  .nav-menu.active {
+    max-height: 400px;
+  }
+
+  .nav-menu li {
+    border-bottom: 1px solid #f0f5f0;
+    padding: 12px 0;
+    margin: 0;
+  }
+
+  .nav-menu li:last-child {
+    border-bottom: none;
+  }
+
+  .nav-menu a {
+    font-size: 0.95rem;
+    padding: 8px 0;
+  }
+
+  .nav-menu a::after {
+    display: none;
+  }
+
+  .nav-menu a:hover {
+    color: #2d8659;
+  }
+
+}
+
+@media (max-width: 768px) {
+  .nav-container {
+    width: 90%;
+  }
+
+  .logo-brand img {
+    height: 40px;
+  }
+
+  .logo-brand span {
+    display: none;
+  }
+
+  .nav-menu {
+    max-height: 0;
+  }
+
+  .nav-menu.active {
+    max-height: 350px;
+  }
+
+  .nav-menu a {
+    font-size: 0.9rem;
+  }
+
+}
+
+@media (max-width: 576px) {
+  .navbar-custom {
+    padding: 10px 0;
+  }
+
+  .nav-container {
+    width: 95%;
+    gap: 8px;
+  }
+
+  .logo-brand {
+    gap: 6px;
+  }
+
+  .logo-brand img {
+    height: 38px;
+  }
+
+  .logo-brand span {
+    display: none;
+  }
+
+  .menu-toggle {
+    padding: 3px 6px;
+  }
+
+  .menu-toggle span {
+    width: 22px;
+    height: 2px;
+  }
+
+  .nav-menu {
+    max-height: 0;
+  }
+
+  .nav-menu.active {
+    max-height: 300px;
+  }
+
+  .nav-menu li {
+    padding: 10px 0;
+  }
+
+  .nav-menu a {
+    font-size: 0.88rem;
+    padding: 6px 0;
+  }
+
+}
+
 .search-float {
     position: sticky;
     top: 70px;
