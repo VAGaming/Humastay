@@ -61,6 +61,12 @@ loginForm.addEventListener('submit', function (e) {
         alert('Mật khẩu phải có ít nhất 6 ký tự');
         return;
     }
-
-     window.location.href = "../index.html";
+    sessionStorage.setItem("isLogin", "true"); 
+    const redirectUrl = sessionStorage.getItem("redirectAfterLogin"); 
+    if (redirectUrl) { 
+        sessionStorage.removeItem("redirectAfterLogin"); 
+        window.location.href = redirectUrl; 
+    } else { 
+        window.location.href = "../index.html"; 
+    }
 });
