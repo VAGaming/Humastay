@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const roomData = JSON.parse(localStorage.getItem("selectedRoom"));
+    const roomData = JSON.parse(sessionStorage.getItem("selectedRoom"));
 
     if (roomData) {
         document.getElementById("room-name").innerText = roomData.name;
@@ -17,16 +17,12 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         let days = calcDays(roomData.checkIn, roomData.checkOut);
-        let tax = 50000;
-        let total = price * days + tax;
-
-        document.getElementById("price-night").innerText =
-            price.toLocaleString("vi-VN") + "đ x " + days + " đêm";
-
-        const finalPriceElem = document.getElementById("final-price");
-        if (finalPriceElem) {
-            finalPriceElem.innerText = total.toLocaleString("vi-VN") + "đ";
-        }
+        let roomTotal = price * days;
+        let tax = roomTotal * 0.18;
+        let total = roomTotal + tax;
+        document.getElementById("price-night").innerText =price.toLocaleString("vi-VN") +"đ x " +days +" đêm";
+        document.getElementById("tax-price").innerText =tax.toLocaleString("vi-VN") + "đ";
+        document.getElementById("final-price").innerText =total.toLocaleString("vi-VN") + "đ";
     }
 
     const confirmBtn = document.querySelector(".confirm-btn");
@@ -145,6 +141,34 @@ document.addEventListener("DOMContentLoaded", function () {
 
         const modal = new bootstrap.Modal(document.getElementById('paymentModal'));
         modal.show();
+    });
+
+    const menuToggle = document.getElementById('menuToggle');
+    const navMenu = document.getElementById('navMenu');
+
+    menuToggle.addEventListener('click', function (e) {
+        e.stopPropagation();
+        menuToggle.classList.toggle('active');
+        navMenu.classList.toggle('active');
+    });
+
+    document.querySelectorAll('.nav-menu a').forEach(link => {
+        link.addEventListener('click', function () {
+            menuToggle.classList.remove('active');
+            navMenu.classList.remove('active');
+        });
+    });
+
+    document.addEventListener('click', function (e) {
+        if (!e.target.closest('.nav-container')) {
+            menuToggle.classList.remove('active');
+            navMenu.classList.remove('active');
+        }
+    });
+
+    window.addEventListener('scroll', function () {
+        menuToggle.classList.remove('active');
+        navMenu.classList.remove('active');
     });
 });
 
