@@ -52,8 +52,46 @@ document.addEventListener("DOMContentLoaded", function () {
             bottomList.innerHTML += createHorizontalCard(i);
         }
     }
+
+        const menuToggle = document.getElementById('menuToggle');
+    const navMenu = document.getElementById('navMenu');
+
+    menuToggle.addEventListener('click', function (e) {
+        e.stopPropagation();
+        menuToggle.classList.toggle('active');
+        navMenu.classList.toggle('active');
+    });
+
+    document.querySelectorAll('.nav-menu a').forEach(link => {
+        link.addEventListener('click', function () {
+            menuToggle.classList.remove('active');
+            navMenu.classList.remove('active');
+        });
+    });
+
+    document.addEventListener('click', function (e) {
+        if (!e.target.closest('.nav-container')) {
+            menuToggle.classList.remove('active');
+            navMenu.classList.remove('active');
+        }
+    });
+
+    window.addEventListener('scroll', function () {
+        menuToggle.classList.remove('active');
+        navMenu.classList.remove('active');
+    });
 });
 
 function goBooking() {
-    window.location.href = "../HTML/DatPhong.html";
-}
+    const isLogin = sessionStorage.getItem("isLogin");
+    if (isLogin === "true") {
+        window.location.href = "../HTML/DatPhong.html";
+    } else {
+        alert("Cần đăng nhập để tiếp tục");
+        sessionStorage.setItem(
+            "redirectAfterLogin",
+            "../HTML/DatPhong.html"
+        );
+            window.location.href = "../HTML/login.html";
+        }
+    }
